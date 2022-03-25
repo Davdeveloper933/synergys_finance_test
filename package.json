@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "NODE_ENV=production nuxt build",
-    "heroku-postbuild": "NODE_ENV=production npm run build",
-    "generate": "nuxt generate",
+    "build": "nuxt build",
     "start": "nuxt start",
+    "heroku-postbuild": "npm run build",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:prettier",
