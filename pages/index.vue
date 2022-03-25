@@ -16,6 +16,8 @@
 <!--        <source media="(max-width: 767px)" :srcset="require(`~/assets/img/section-bg_mobile.jpg`)">-->
 <!--      </picture>-->
     <holders-section />
+    <how-it-works-section />
+    <liquidity-section />
     </div>
     <site-footer />
   </div>
@@ -29,9 +31,14 @@ import FundsSection from "~/components/blocks/funds";
 import WatchVideoSection from "~/components/blocks/video";
 import TheMarketSection from "~/components/blocks/market";
 import HoldersSection from "~/components/blocks/holders";
+import HowItWorksSection from "~/components/blocks/howItWorks";
+import LiquiditySection from "~/components/blocks/liquidity";
 export default {
   name: "IndexPage",
-  components: {HoldersSection, TheMarketSection, WatchVideoSection, FundsSection, IntroSection, SiteFooter, SiteHeader},
+  components: {
+    LiquiditySection,
+    HowItWorksSection,
+    HoldersSection, TheMarketSection, WatchVideoSection, FundsSection, IntroSection, SiteFooter, SiteHeader},
   layout: "DefaultLayout",
 };
 </script>

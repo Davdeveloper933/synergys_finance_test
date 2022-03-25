@@ -65,7 +65,7 @@ export default {
   position: relative;
   //background: radial-gradient(40px 40px at 40px 40px, rgba(207,141,224,0.78) 0%, rgba(0,0,0,1) 55%);
   background: linear-gradient(0deg, rgba(17, 18, 26, 0.56), rgba(17, 18, 26, 0.56)), radial-gradient(35.38% 92.38% at 68.4% 98.28%, #A36DB6 0%, rgba(15, 15, 55, 0.46) 100%);
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 767px) {
     background: linear-gradient(0deg, rgba(17, 18, 26, 0.56), rgba(17, 18, 26, 0.56)), radial-gradient(230.38% 55.38% at 9.4% 50.28%, #D16497 0%, rgba(15, 15, 55, 0.46) 100%);
   }
   &__line {
@@ -86,7 +86,7 @@ export default {
     }
   }
   .section-title {
-    max-width: 50vw;
+    max-width: unset;
     @media screen and (max-width: 992px) {
       max-width: 100%;
     }
@@ -102,13 +102,17 @@ export default {
     }
   }
   &__img {
-    width: 60%;
+    width: 70%;
     position: absolute;
     right: 0;
     @media screen and (max-width: 1200px) {
-      width: 60%;
+      width: 70%;
     }
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 992px) {
+      width: 70%;
+      bottom: 0;
+    }
+    @media screen and (max-width: 767px) {
       position: unset;
       display: flex;
       justify-content: center;
@@ -121,9 +125,9 @@ export default {
   }
   &__text {
     &-wrapper {
-      width: 56%;
+      //width: 56%;
       @media screen and (max-width: 1200px) {
-        width: 40%;
+        //width: 40%;
       }
       @media screen and (max-width: 991px) {
         width: 100%;
