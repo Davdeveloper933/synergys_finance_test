@@ -15,7 +15,8 @@
           </section-title>
         </div>
         <div class="section-video__video-block">
-          <img class="section-video__video-block__img" :src="require(`~/assets/img/video.jpg`)" alt="">
+          <iframe src="https://www.youtube.com/embed/oSzRI5y6tK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--          <img class="section-video__video-block__img" :src="require(`~/assets/img/video.jpg`)" alt="">-->
           <div class="section-video__video-block__dark-img">
             <img :src="require(`~/assets/img/dark.png`)" alt="">
           </div>
@@ -72,10 +73,26 @@ export default {
       width: fit-content;
       margin: 0 auto;
     }
+    @media screen and (max-width: 575px) {
+      width: 100%;
+    }
   }
   &__video-block {
     margin-top: 115px;
     position: relative;
+    width: 100%;
+    iframe {
+      border-radius: 16px;
+      width: 590px;
+      height: 411px;
+      @media screen and (max-width: 767px) {
+        //width: 530px;
+        width: 100%;
+      }
+      @media screen and (max-width: 575px) {
+        height: 300px;
+      }
+    }
     @media screen and (max-width: 992px) {
       width: 100%;
       margin-top: 50px;
@@ -87,6 +104,9 @@ export default {
       top: 49%;
       right: -9vw;
       z-index: -1;
+      @media screen and (max-width: 1200px) {
+        //right: -13vw;
+      }
       @media screen and (max-width: 425px) {
         top: 49%;
         right: -26vw;

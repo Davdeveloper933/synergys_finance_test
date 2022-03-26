@@ -12,12 +12,10 @@
     </div>
     <the-market-section />
     <div class="section-bg-container">
-<!--      <picture>-->
-<!--        <source media="(max-width: 767px)" :srcset="require(`~/assets/img/section-bg_mobile.jpg`)">-->
-<!--      </picture>-->
     <holders-section />
     <how-it-works-section />
     <liquidity-section />
+    <top-blockchains-section />
     </div>
     <site-footer />
   </div>
@@ -33,9 +31,11 @@ import TheMarketSection from "~/components/blocks/market";
 import HoldersSection from "~/components/blocks/holders";
 import HowItWorksSection from "~/components/blocks/howItWorks";
 import LiquiditySection from "~/components/blocks/liquidity";
+import TopBlockchainsSection from "~/components/blocks/topBlockchains";
 export default {
   name: "IndexPage",
   components: {
+    TopBlockchainsSection,
     LiquiditySection,
     HowItWorksSection,
     HoldersSection, TheMarketSection, WatchVideoSection, FundsSection, IntroSection, SiteFooter, SiteHeader},

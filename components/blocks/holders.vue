@@ -2,7 +2,6 @@
   <div class="section-holders section-padding-top">
     <div class="section-holders__absolute-img">
       <img class="ellipse" :src="require(`~/assets/img/holders_ellipse.png`)" alt="">
-<!--      <img class="ball" :src="require(`~/assets/img/yields_ellipse.png`)" alt="">-->
     </div>
     <div class="container">
       <div class="section-holders__flex-box">
@@ -165,10 +164,25 @@ export default {
   &__info {
     margin-top: 64px;
     width: 30vw;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: start;
+    }
     @media screen and (max-width: 600px) {
       width: 100%;
     }
+    @media screen and (max-width: 575px) {
+      display: block;
+    }
     &-item {
+      @media screen and (max-width: 767px) {
+        width: 40%;
+      }
+      @media screen and (max-width: 575px) {
+        width: 100%;
+      }
       &:first-child {
         margin-bottom: 40px;
       }

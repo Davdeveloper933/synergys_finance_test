@@ -1,15 +1,27 @@
 <template>
-  <h2 class="section-title">
+  <h2 v-if="!reversed" class="section-title">
     <slot />
     <span class="section-title__stroked-text">
      <slot name="stroked-text" />
     </span>
   </h2>
+  <h2 v-else class="section-title">
+    <span class="section-title__stroked-text">
+      <slot />
+    </span>
+     <slot name="normal-text" />
+  </h2>
 </template>
 
 <script>
 export default {
-  name: "SectionTitle"
+  name: "SectionTitle",
+  props: {
+    reversed: {
+      type: Boolean,
+      default: false
+    }
+  }
 };
 </script>
 
