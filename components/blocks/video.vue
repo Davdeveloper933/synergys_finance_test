@@ -4,8 +4,8 @@
       <div class="section-video__wrapper">
         <div class="section-video__title">
           <picture>
-            <source media="(max-width:425px)" :srcset="require(`~/assets/img/ellipse_mobile.png`)">
-            <img class="section-video__ellipse" :src="require(`~/assets/img/ellipse_desktop.png`)" alt="">
+            <source media="(max-width:425px)" srcset="img/ellipse_mobile.png">
+            <img class="section-video__ellipse" src="img/ellipse_desktop.png" alt="">
           </picture>
           <section-title class="small">
             watch video about
@@ -16,9 +16,8 @@
         </div>
         <div class="section-video__video-block">
           <iframe src="https://www.youtube.com/embed/oSzRI5y6tK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<!--          <img class="section-video__video-block__img" :src="require(`~/assets/img/video.jpg`)" alt="">-->
           <div class="section-video__video-block__dark-img">
-            <img :src="require(`~/assets/img/dark.png`)" alt="">
+            <img src="img/dark.png" alt="">
           </div>
         </div>
       </div>

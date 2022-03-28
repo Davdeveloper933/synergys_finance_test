@@ -23,7 +23,7 @@
         <div class="section-funds__steps-wrapper">
           <div class="section-funds__steps-item">
             <h3 class="section-funds__steps-item__number">
-              <img :src="require(`~/assets/img/01.png`)" alt="">
+              <img src="img/01.png" alt="">
             </h3>
             <h4 class="section-funds__steps-item__title">Discover the best vaults</h4>
             <p class="section-funds__steps-item__desc">
@@ -32,7 +32,7 @@
           </div>
           <div class="section-funds__steps-item">
             <h3 class="section-funds__steps-item__number">
-              <img :src="require(`~/assets/img/02.png`)" alt="">
+              <img src="img/02.png" alt="">
             </h3>
             <h4 class="section-funds__steps-item__title">
               CAPE holders receive 80% of the platform’s commission
@@ -43,7 +43,7 @@
           </div>
           <div class="section-funds__steps-item">
             <h3 class="section-funds__steps-item__number">
-              <img :src="require(`~/assets/img/03.png`)" alt="">
+              <img src="img/03.png" alt="">
             </h3>
             <h4 class="section-funds__steps-item__title">
               Deposit your funds

@@ -1,7 +1,7 @@
 <template>
   <div class="section-holders section-padding-top">
     <div class="section-holders__absolute-img">
-      <img class="ellipse" :src="require(`~/assets/img/holders_ellipse.png`)" alt="">
+      <img class="ellipse" src="img/holders_ellipse.png" alt="">
     </div>
     <div class="container">
       <div class="section-holders__flex-box">
@@ -18,7 +18,7 @@
             </section-title>
           </div>
           <div class="section-holders__img">
-            <img :src="require(`~/assets/img/yields_img.png`)" alt="">
+            <img src="img/yields_img.png" alt="">
           </div>
           <div class="section-holders__question">
             <div class="gradient-line"></div>
@@ -29,7 +29,7 @@
           <div class="section-holders__info section-padding-bottom">
             <div class="section-holders__info-item">
               <div class="section-holders__info-item__img">
-                <img :src="require(`~/assets/img/holders_1.png`)" alt="">
+                <img src="img/holders_1.png" alt="">
               </div>
               <p class="section-holders__info-item__text">
                 Capella shares 100% of transaction fees with its token holders. The more liquidity the protocol provides the higher the crypto dividends are.
@@ -37,7 +37,7 @@
             </div>
             <div class="section-holders__info-item">
               <div class="section-holders__info-item__img">
-                <img :src="require(`~/assets/img/holders_2.png`)" alt="">
+                <img src="img/holders_2.png" alt="">
               </div>
               <p class="section-holders__info-item__text">
                 To start receiving passive income from your crypto assets, simply buy SYN and stake it on our platform
