@@ -2,8 +2,8 @@
   <div class="index">
     <div class="section-bg-container">
       <picture>
-        <source media="(max-width: 767px)" :srcset="require(`~/assets/img/section-bg_mobile.jpg`)">
-        <img :src="require(`~/assets/img/section-bg_1.jpg`)" alt="">
+        <source media="(max-width: 767px)" srcset="img/section-bg_mobile.jpg">
+        <img src="img/section-bg_1.jpg" alt="">
       </picture>
       <site-header />
       <intro-section />

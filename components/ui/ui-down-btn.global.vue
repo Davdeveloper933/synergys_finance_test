@@ -1,6 +1,6 @@
 <template>
   <button class="ui-down-btn">
-    <img :src="require(`~/assets/svg/down.svg`)" alt="">
+    <img src="svg/down.svg" alt="">
   </button>
 </template>
 

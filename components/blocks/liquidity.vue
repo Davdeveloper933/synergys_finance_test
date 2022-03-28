@@ -15,7 +15,7 @@
             </section-title>
           </div>
           <div class="section-liquidity__img">
-            <img :src="require(`~/assets/img/liquidity_img.png`)" alt="">
+            <img src="img/liquidity_img.png" alt="">
           </div>
           <div class="section-liquidity__info section-padding-bottom">
             <div class="section-liquidity__info-item">
@@ -52,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 
 .section-liquidity {
-  background-image: url("assets/img/liquidity_bg.jpg");
+  background-image: url("./static/img/liquidity_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

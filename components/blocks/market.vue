@@ -29,7 +29,7 @@
               class="section-market__card-item"
             >
               <div class="section-market__card-item__img">
-                <img :src="require(`~/assets/img/cards/${card.img}.png`)" alt="">
+                <img :src="`img/cards/${card.img}.png`" alt="">
               </div>
               <h3 class="section-market__card-item__title">
                 {{ card.title }}

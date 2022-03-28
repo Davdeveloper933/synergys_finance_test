@@ -15,14 +15,14 @@
         </div>
         <div class="section-how-it-works__column">
           <div class="section-how-it-works__column-user">
-            <img :src="require(`~/assets/img/steps/user.png`)" alt="">
+            <img src="img/steps/user.png" alt="">
           </div>
           <div class="section-how-it-works__column-arrow">
-            <img :src="require(`~/assets/img/steps/arrow.png`)" alt="">
+            <img src="img/steps/arrow.png" alt="">
           </div>
           <div class="section-how-it-works__column-item">
             <div class="section-how-it-works__column-item__img">
-              <img :src="require(`~/assets/img/steps/dollar.png`)" alt="">
+              <img src="img/steps/dollar.png" alt="">
             </div>
             <h3 class="section-how-it-works__column-item__title">
               You buy Syn Token
@@ -32,11 +32,11 @@
             </p>
           </div>
           <div class="section-how-it-works__column-arrow">
-            <img :src="require(`~/assets/img/steps/arrow.png`)" alt="">
+            <img src="img/steps/arrow.png" alt="">
           </div>
           <div class="section-how-it-works__column-item">
             <div class="section-how-it-works__column-item__img">
-              <img :src="require(`~/assets/img/steps/dollar.png`)" alt="">
+              <img src="img/steps/dollar.png" alt="">
             </div>
             <h3 class="section-how-it-works__column-item__title">
               Сlient stake token on the Platform
@@ -46,11 +46,11 @@
             </p>
           </div>
           <div class="section-how-it-works__column-arrow">
-            <img :src="require(`~/assets/img/steps/arrow.png`)" alt="">
+            <img src="img/steps/arrow.png" alt="">
           </div>
           <div class="section-how-it-works__column-item">
             <div class="section-how-it-works__column-item__img">
-              <img :src="require(`~/assets/img/steps/dollar.png`)" alt="">
+              <img src="img/steps/dollar.png" alt="">
             </div>
             <h3 class="section-how-it-works__column-item__title">
               Web 3.0 and Pools
@@ -71,11 +71,11 @@
             </div>
           </div>
           <div class="section-how-it-works__column-arrow">
-            <img :src="require(`~/assets/img/steps/arrow.png`)" alt="">
+            <img src="img/steps/arrow.png" alt="">
           </div>
           <div class="section-how-it-works__column-item">
             <div class="section-how-it-works__column-item__img">
-              <img :src="require(`~/assets/img/steps/dollar.png`)" alt="">
+              <img src="img/steps/dollar.png" alt="">
             </div>
             <h3 class="section-how-it-works__column-item__title">
               80% profit goes to ...
@@ -85,11 +85,11 @@
             </p>
           </div>
           <div class="section-how-it-works__column-arrow">
-            <img :src="require(`~/assets/img/steps/arrow.png`)" alt="">
+            <img src="img/steps/arrow.png" alt="">
           </div>
           <div class="section-how-it-works__column-item">
             <div class="section-how-it-works__column-item__img">
-              <img :src="require(`~/assets/img/steps/dollar.png`)" alt="">
+              <img src="img/steps/dollar.png" alt="">
             </div>
             <h3 class="section-how-it-works__column-item__title">
               80% profit goes to ...
@@ -109,7 +109,7 @@
               of each pool
             </p>
           </div>
-          <img class="" :src="require(`~/assets/img/all.png`)" alt="">
+          <img class="" src="img/all.png" alt="">
         </div>
         <div class="section-how-it-works__buttons-box">
           <button class="section-how-it-works__buttons-box__skip-btn">Skip process</button>

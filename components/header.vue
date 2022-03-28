@@ -5,7 +5,7 @@ class="site-header" :class="{'opened': menuIsOpen,'opened-mobile': mobileMenuIsO
     <div class="site-header__wrapper">
       <div class="site-header__logo site-header-item site-header__logo-desktop">
         <a v-if="!menuIsOpen" href="/" >
-          <img :src="require(`~/assets/svg/logo.svg`)" alt="">
+          <img src="svg/logo.svg" alt="">
         </a>
         <div v-else>
           <a role="button" href="/" class="contact-link contact-link-left">
@@ -15,15 +15,15 @@ class="site-header" :class="{'opened': menuIsOpen,'opened-mobile': mobileMenuIsO
       </div>
       <div class="site-header__logo site-header__logo-mobile">
         <a v-if="!mobileMenuIsOpen" href="/" >
-          <img :src="require(`~/assets/svg/logo.svg`)" alt="">
+          <img src="svg/logo.svg" alt="">
         </a>
         <a v-else href="/">
-          <img :src="require(`~/assets/svg/logo-text.svg`)" alt="">
+          <img src="svg/logo-text.svg" alt="">
         </a>
       </div>
       <div class="site-header__logo site-header__logo-tablet">
         <a href="/">
-          <img :src="require(`~/assets/svg/logo-text.svg`)" alt="">
+          <img src="svg/logo-text.svg" alt="">
         </a>
       </div>
       <div class="menu-btn-container site-header-item">
@@ -31,13 +31,13 @@ class="site-header" :class="{'opened': menuIsOpen,'opened-mobile': mobileMenuIsO
           <button v-if="!menuIsOpen" class="menu-btn" @click="menuIsOpen = !menuIsOpen">
             <span class="menu-btn__text">Menu</span>
             <div class="menu-btn__icon_open">
-              <img :src="require(`~/assets/svg/menu-open.svg`)" alt="">
+              <img src="svg/menu-open.svg" alt="">
             </div>
           </button>
           <button v-else class="menu-btn" @click="menuIsOpen = !menuIsOpen">
             <span class="menu-btn__text">Close</span>
             <div class="menu-btn__icon_close" >
-              <img :src="require(`~/assets/svg/menu-close.svg`)" alt="">
+              <img src="svg/menu-close.svg" alt="">
             </div>
           </button>
         </div>
@@ -57,25 +57,25 @@ class="site-header" :class="{'opened': menuIsOpen,'opened-mobile': mobileMenuIsO
       </div>
       <div class="tablet-menu-btn">
         <button class="menu-btn rounded" @click="menuIsOpen = !menuIsOpen">
-          <img v-if="!menuIsOpen" :src="require(`~/assets/svg/menu-open.svg`)" alt="">
-          <img v-else :src="require(`~/assets/svg/menu-close.svg`)" alt="">
+          <img v-if="!menuIsOpen" src="svg/menu-open.svg" alt="">
+          <img v-else src="svg/menu-close.svg" alt="">
         </button>
       </div>
       <div class="mobile-btn-container">
         <button class="menu-btn rounded" @click="mobileMenuIsOpen = !mobileMenuIsOpen">
-          <img v-if="!mobileMenuIsOpen" :src="require(`~/assets/svg/menu-open.svg`)" alt="">
-          <img v-else :src="require(`~/assets/svg/menu-close.svg`)" alt="">
+          <img v-if="!mobileMenuIsOpen" src="svg/menu-open.svg" alt="">
+          <img v-else src="svg/menu-close.svg" alt="">
         </button>
       </div>
     </div>
     <div v-show="mobileMenuIsOpen" class="menu-opened-mobile">
-      <img class="menu-opened-mobile-line" :src="require(`~/assets/svg/line.svg`)" alt="">
+      <img class="menu-opened-mobile-line" src="svg/line.svg" alt="">
       <div class="menu-opened-mobile__content">
         <nuxt-link v-for="(item,indx) in menuItems" :key="indx" class="menu-opened-mobile__link" :to="item.url">
           {{ item.label }}
         </nuxt-link>
       </div>
-      <img class="menu-opened-mobile-line" :src="require(`~/assets/svg/line.svg`)" alt="">
+      <img class="menu-opened-mobile-line" src="svg/line.svg" alt="">
       <div class="menu-opened-mobile__buttons">
         <ui-button>Join Whitelist</ui-button>
         <ui-button class="menu-opened-mobile__buttons-contact">contact@synergys.finance</ui-button>

@@ -12,36 +12,36 @@
       </h1>
       <div class="section-intro__browser">
         <picture>
-          <source media="(max-width: 375px)" :srcset="require(`~/assets/img/neon_small.png`)">
-          <img class="neon-img" :src="require(`~/assets/img/neon.png`)" alt="">
+          <source media="(max-width: 375px)" srcset="img/neon_small.png">
+          <img class="neon-img" src="img/neon.png" alt="">
         </picture>
 
-        <img class="spline-left" :src="require(`~/assets/img/spline_left.png`)" alt="">
-        <img class="spline-right" :src="require(`~/assets/img/spline_right.png`)" alt="">
+        <img class="spline-left" src="img/spline_left.png" alt="">
+        <img class="spline-right" src="img/spline_right.png" alt="">
         <div class="section-intro__browser__inner">
           <div class="section-intro__browser-header">
             <div class="section-intro__browser-header-wrapper">
               <div>
-                <img :src="require(`~/assets/img/traffic_lights.png`)" alt="">
+                <img src="img/traffic_lights.png" alt="">
               </div>
               <div class="section-intro__browser-searchbar">
               <span class="section-intro__browser-searchbar__text">
-                <img :src="require(`~/assets/svg/lock.svg`)" alt="">
+                <img src="svg/lock.svg" alt="">
                 synergys.finance
               </span>
-                <img class="refresh-img" :src="require(`~/assets/svg/refresh.svg`)" alt="">
+                <img class="refresh-img" src="svg/refresh.svg" alt="">
               </div>
-              <img :src="require(`~/assets/svg/toolbar.svg`)" alt="">
+              <img src="svg/toolbar.svg" alt="">
             </div>
           </div>
-          <img class="ethereum-logo" :src="require(`~/assets/img/ethereum_logo.png`)" alt="">
-          <img class="bitcoin-logo" :src="require(`~/assets/img/bitcoin_logo.png`)" alt="">
+          <img class="ethereum-logo" src="img/ethereum_logo.png" alt="">
+          <img class="bitcoin-logo" src="img/bitcoin_logo.png" alt="">
 <!--          <div class="section-intro__browser__inner-img">-->
             <ui-down-btn />
 <!--          </div>-->
           <div class="section-intro__browser__content">
             <div class="section-intro__browser__content__intro">
-              <img :src="require(`~/assets/svg/globe.svg`)" alt="">
+              <img src="svg/globe.svg" alt="">
               <h3 class="section-intro__browser__content__title">
                 Synergys Finance is multichain yield optimization platform for Liquidity Providers.
                 Full decentralisation ensures <span class="profit100">100% of profits</span> are given back to СAPE stakers
@@ -60,19 +60,19 @@
                     </p>
                     <p class="timer-block-item__time">day</p>
                   </div>
-                  <img class="timer-dot" :src="require(`~/assets/img/dot-white.png`)" alt="">
+                  <img class="timer-dot" src="img/dot-white.png" alt="">
                   <div class="timer-block-item">
                     <p class="timer-block-item__value">8
                     </p>
                     <p class="timer-block-item__time">hour</p>
                   </div>
-                  <img class="timer-dot" :src="require(`~/assets/img/dot-white.png`)" alt="">
+                  <img class="timer-dot" src="img/dot-white.png" alt="">
                   <div class="timer-block-item">
                     <p class="timer-block-item__value">24
                     </p>
                     <p class="timer-block-item__time">min</p>
                   </div>
-                  <img class="timer-dot" :src="require(`~/assets/img/dot-pink.png`)" alt="">
+                  <img class="timer-dot" src="img/dot-pink.png" alt="">
                   <div class="timer-block-item">
                     <p class="timer-block-item__value">
                       37
@@ -89,7 +89,6 @@
                 </div>
               </div>
             </div>
-<!--            <img class="ellipse" :src="require(`~/assets/svg/browser_ellipse.svg`)" alt="">-->
           </div>
         </div>
       </div>
@@ -387,7 +386,7 @@ export default {
           left: 0;
           width: 100%;
           height: 8px;
-          background-image: url("~@/assets/img/profit-line.png");
+          background-image: url("./static/img/profit-line.png");
           background-repeat: no-repeat;
           background-size: 100%;
         }
@@ -457,7 +456,7 @@ export default {
       position: relative;
       width: 69vw;
       border-radius: 12px;
-      background-image: url("~/assets/img/browser_bg.jpg");
+      background-image: url(img/browser_bg.jpg);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       @media screen and (max-width: 1200px) {
@@ -468,7 +467,7 @@ export default {
       }
       @media screen and (max-width: 767px) {
         width: 89vw;
-        background-image: url("~/assets/img/browser_bg-mobile.jpg");
+        background-image: url("./static/img/browser_bg-mobile.jpg");
       }
       @media screen and (max-width: 425px) {
         width: 100%;
