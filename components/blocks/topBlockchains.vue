@@ -13,33 +13,41 @@
         </section-title>
       </div>
       <div class="section-top-blockchains__cards">
-        <div class="section-top-blockchains__cards-item">
+        <div v-for="(card,indx) in cards" :key="indx" class="section-top-blockchains__cards-item">
           <div class="section-top-blockchains__cards-item__title">
             <section-title class="small">
-
+                {{ card.title }}
               <template #stroked-text>
-
+                pool
               </template>
             </section-title>
           </div>
           <h4 class="section-top-blockchains__cards-item__subtitle">
-
+            {{ card.subtitle }}
           </h4>
           <div class="section-top-blockchains__cards-item__tokens">
-            <div class="section-top-blockchains__cards-item__tokens-item">
+            <div
+                  v-for="(token,token_indx) in card.tokens"
+                 :key="token_indx" class="section-top-blockchains__cards-item__tokens-item">
               <span class="section-top-blockchains__cards-item__tokens-item__text">
-
+                {{ token.name }}
               </span>
-              <img class="section-top-blockchains__cards-item__tokens-item__img" src="" alt="">
+              <img
+                    class="section-top-blockchains__cards-item__tokens-item__img"
+                   :src="`img/tokens/${token.img}.png`" alt="">
             </div>
           </div>
           <div class="section-top-blockchains__cards-item__bottom">
-            <div class="section-top-blockchains__cards-item__bottom-item">
+            <div
+              v-for="(item,item_indx) in card.bottomItems"
+              :key="item_indx"
+              class="section-top-blockchains__cards-item__bottom-item"
+            >
               <h4 class="section-top-blockchains__cards-item__bottom-item__text">
-
+                {{ item.text }}
               </h4>
               <div class="section-top-blockchains__cards-item__bottom-item__value">
-
+                {{ item.value }}
               </div>
             </div>
           </div>
@@ -63,35 +71,35 @@ export default {
           tokens: [
             {
               name: "usdt",
-              img: ""
+              img: "usdt-blue"
             },
             {
               name: "usdt",
-              img: ""
+              img: "usdt-blue"
             },
             {
               name: "usdt",
-              img: ""
+              img: "usdt-dark"
             },
             {
               name: "usdt",
-              img: ""
+              img: "usdt-yellow"
             },
             {
               name: "ust",
-              img: ""
+              img: "ust"
             },
             {
               name: "dai",
-              img: ""
+              img: "dai"
             },
             {
               name: "mai",
-              img: ""
+              img: "mai"
             },
             {
               name: "mim",
-              img: ""
+              img: "mim"
             },
           ],
           bottomItems: [
@@ -111,15 +119,15 @@ export default {
           tokens: [
             {
               name: "eth",
-              img: ""
+              img: "eth"
             },
             {
               name: "btc",
-              img: ""
+              img: "eth"
             },
             {
               name: "usd",
-              img: ""
+              img: "eth"
             }
           ],
           bottomItems: [
@@ -139,31 +147,31 @@ export default {
           tokens: [
             {
               name: "eth",
-              img: ""
+              img: "eth"
             },
             {
               name: "luna",
-              img: ""
+              img: "luna"
             },
             {
               name: "bnb",
-              img: ""
+              img: "bnb"
             },
             {
               name: "avax",
-              img: ""
+              img: "avax"
             },
             {
               name: "ftm",
-              img: ""
+              img: "ftm"
             },
             {
               name: "sol",
-              img: ""
+              img: "sol"
             },
             {
               name: "matic",
-              img: ""
+              img: "matic"
             }
           ],
           bottomItems: [
@@ -195,32 +203,74 @@ export default {
     }
   }
   &__cards {
+    margin-top:48px;
+    display: grid;
+    grid-template-columns: 3.5fr 3.5fr 3.5fr;
+    grid-gap: 20px;
     &-item {
       background: linear-gradient(270deg, rgba(255, 162, 223, 0.08) -4.07%, rgba(105, 159, 255, 0.08) 47.91%);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 8px;
       padding: 40px;
      &__title {
-
+       margin-bottom: 24px;
+       .section-title {
+         font-weight: 700;
+         font-size: 32px;
+       }
      }
       &__subtitle {
-
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
       }
       &__tokens {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 24px;
         &-item {
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          border-radius: 24px;
+          padding: 6px 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 25%;
           &__text {
-
+            margin-right: 4px;
+            font-weight: 500;
+            font-size: 10px;
+            text-transform: uppercase;
           }
           &__img {
-
+            width: 14px;
           }
         }
       }
       &__bottom {
-
+        margin-top: 24px;
+        &-item {
+          &__text {
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+          }
+          &__value {
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+          }
+        }
       }
     }
   }
 }
+
 
 </style>
