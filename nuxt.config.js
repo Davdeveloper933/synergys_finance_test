@@ -1,6 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
+  router: {
+    base: "/synergys_finance_test/"
+  },
   styleResources: {
     scss: [
       "@/assets/scss/index.scss",
