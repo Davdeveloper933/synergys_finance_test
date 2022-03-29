@@ -79,11 +79,14 @@ export default {
   &__video-block {
     margin-top: 115px;
     position: relative;
-    width: 100%;
+    width: 59%;
     iframe {
       border-radius: 16px;
       width: 590px;
       height: 411px;
+      @media screen and (max-width: 1092px) {
+        width: 100%;
+      }
       @media screen and (max-width: 767px) {
         //width: 530px;
         width: 100%;
@@ -101,10 +104,15 @@ export default {
     &__dark-img {
       position: absolute;
       top: 49%;
-      right: -9vw;
+      right: 0;
       z-index: -1;
-      @media screen and (max-width: 1200px) {
-        //right: -13vw;
+      @media screen and (max-width: 1092px) {
+        top: 55%;
+        right: -6vw;
+      }
+      @media screen and (max-width: 992px) {
+        right: -21vw;
+        top: 71%;
       }
       @media screen and (max-width: 425px) {
         top: 49%;

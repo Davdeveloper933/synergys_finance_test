@@ -456,7 +456,7 @@ export default {
       position: relative;
       width: 69vw;
       border-radius: 12px;
-      background-image: url(img/browser_bg.jpg);
+      background-image: url("assets/img/browser_bg.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       @media screen and (max-width: 1200px) {

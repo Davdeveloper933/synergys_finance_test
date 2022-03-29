@@ -173,14 +173,9 @@ export default {
       align-items: center;
       &__buttons {
         margin-top: 24px;
-        //&-flex-box {
-        //  display: flex;
-        //  justify-content: center;
-        //  &.between {
-        //    justify-content: space-between;
-        //    margin-bottom: 8px;
-        //  }
-        //}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         &-item {
           background: linear-gradient(270deg, rgba(255, 162, 179, 0.12) -4.07%, rgba(105, 159, 255, 0.12) 47.91%);
           border: 1px solid rgba(255, 255, 255, 0.08);
@@ -191,8 +186,8 @@ export default {
           text-transform: uppercase;
           color: #FFFFFF;
           padding: 8px 20px;
+          margin-top: 8px;
           &:last-child {
-            margin-top: 8px;
             margin-left: auto;
             margin-right: auto;
             display: block;

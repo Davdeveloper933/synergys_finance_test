@@ -33,6 +33,7 @@ export default {
   font-size: 96px;
   font-weight: 700;
   line-height: 90%;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   &__stroked-text {
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
