@@ -147,7 +147,7 @@ export default {
         margin-top: 16px;
         font-weight: 400;
         font-size: 18px;
-        line-height: 120%;
+        line-height: 160%;
       }
     }
   }

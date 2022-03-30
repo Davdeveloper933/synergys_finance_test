@@ -1,12 +1,12 @@
 <template>
-  <div class="section-top-blockchains section-padding-top">
+  <div class="section-top-blockchains section-padding-top section-padding-bottom">
     <div class="container">
       <div class="section-top-blockchains__title">
         <span class="section-top-blockchains__subtitle section-title-subtitle">
               All vaults autocompound at an optimal rate and
         </span>
         <section-title class="small">
-          diversified at the<br>
+          diversified Across
           <template #stroked-text>
             top blockchains
           </template>
@@ -46,7 +46,10 @@
               <h4 class="section-top-blockchains__cards-item__bottom-item__text">
                 {{ item.text }}
               </h4>
-              <div class="section-top-blockchains__cards-item__bottom-item__value">
+              <div
+                    class="section-top-blockchains__cards-item__bottom-item__value"
+                   :class="item.color"
+              >
                 {{ item.value }}
               </div>
             </div>
@@ -105,11 +108,13 @@ export default {
           bottomItems: [
             {
               text: "Pool Deposits",
-              value: "$ 22 400 000"
+              value: "$ 22 400 000",
+              color: "blue"
             },
             {
               text: "Earning rate",
-              value: "22%"
+              value: "22%",
+              color: "green"
             }
           ]
         },
@@ -133,11 +138,13 @@ export default {
           bottomItems: [
             {
               text: "Pool Deposits",
-              value: "$ 32 400 000"
+              value: "$ 32 400 000",
+              color: "blue"
             },
             {
               text: "Earning rate",
-              value: "55%"
+              value: "55%",
+              color: "yellow"
             }
           ]
         },
@@ -167,7 +174,7 @@ export default {
             },
             {
               name: "sol",
-              img: "sol"
+              img: "usdt-dark"
             },
             {
               name: "matic",
@@ -177,11 +184,13 @@ export default {
           bottomItems: [
             {
               text: "Pool Deposits",
-              value: "$ 28 400 000"
+              value: "$ 28 400 000",
+              color: "blue"
             },
             {
               text: "Earning rate",
-              value: "180%"
+              value: "180%",
+              color: "purple"
             }
           ]
         }
@@ -199,19 +208,34 @@ export default {
   border-radius: 24px;
   &__title {
     .section-title {
-      max-width: 100%;
+      max-width: 55vw;
+      @media screen and (max-width: 1200px) {
+        max-width: 60vw;
+      }
+      @media screen and (max-width: 992px) {
+        max-width: 100%;
+      }
     }
   }
   &__cards {
     margin-top:48px;
     display: grid;
-    grid-template-columns: 3.5fr 3.5fr 3.5fr;
+    grid-template-columns: repeat(3, minmax(0, 3.5fr));
     grid-gap: 20px;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 3fr 3fr;
+    }
+    @media screen and (max-width: 575px) {
+      grid-template-columns: 100%;
+    }
     &-item {
       background: linear-gradient(270deg, rgba(255, 162, 223, 0.08) -4.07%, rgba(105, 159, 255, 0.08) 47.91%);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 8px;
       padding: 40px;
+      @media screen and (max-width: 1200px) {
+        padding: 30px;
+      }
      &__title {
        margin-bottom: 24px;
        .section-title {
@@ -227,23 +251,32 @@ export default {
         text-transform: uppercase;
       }
       &__tokens {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
+        display: grid;
+        //grid-template-columns: max-content max-content max-content max-content;
+        //grid-template-columns: 73px 73px 73px 73px;
+        grid-template-columns: repeat(auto-fill, 73px);
+        grid-row-gap: 12px;
+        grid-column-gap: 8px;
+        grid-template-rows: 50fr 50fr;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         padding-bottom: 24px;
+        @media screen and (max-width: 632px) {
+          grid-template-rows: unset;
+        }
+        @media screen and (max-width: 575px) {
+          grid-template-columns: repeat(auto-fill, 73px);
+        }
         &-item {
           border: 1px solid rgba(255, 255, 255, 0.16);
           border-radius: 24px;
-          padding: 6px 14px;
+          padding: 8px 14px;
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 25%;
           &__text {
             margin-right: 4px;
             font-weight: 500;
-            font-size: 10px;
+            font-size: 12px;
             text-transform: uppercase;
           }
           &__img {
@@ -253,18 +286,60 @@ export default {
       }
       &__bottom {
         margin-top: 24px;
+        display: flex;
+        @media screen and (max-width: 1200px) {
+          //margin-bottom: 24px;
+          //flex-direction: column;
+        }
+        @media screen and (max-width: 632px) {
+          flex-direction: row;
+        }
         &-item {
+          &:first-child {
+            margin-right: 16px;
+            @media screen and (max-width: 1200px) {
+              margin-bottom: 24px;
+            }
+            @media screen and (max-width: 992px) {
+              margin-right: 16px;
+            }
+            @media screen and (max-width: 632px) {
+              margin-bottom: 0;
+            }
+          }
           &__text {
             font-weight: 500;
             font-size: 12px;
             letter-spacing: 0.03em;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            @media screen and (max-width: 632px) {
+              font-size: 10px;
+            }
           }
           &__value {
             font-weight: 500;
             font-size: 16px;
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            display: inline-block;
+            padding: 8px 12px;
+            @media screen and (max-width: 632px) {
+              font-size: 14px;
+            }
+            &.blue {
+              background: #4276F6;
+            }
+            &.green {
+              background: #6CAC89;
+            }
+            &.yellow {
+              background: #E1861B;
+            }
+            &.purple {
+              background: #E17B99;
+            }
           }
         }
       }

@@ -32,7 +32,7 @@ export default {
   font-style: normal;
   font-size: 96px;
   font-weight: 700;
-  line-height: 90%;
+  line-height: 110%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   &__stroked-text {

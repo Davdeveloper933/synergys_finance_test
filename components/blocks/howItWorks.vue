@@ -201,7 +201,7 @@ export default {
         font-style: normal;
         font-weight: 700;
         font-size: 19px;
-        line-height: 120%;
+        line-height: 160%;
         text-align: center;
         letter-spacing: -0.02em;
       }
@@ -236,7 +236,7 @@ export default {
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
-        line-height: 120%;
+        line-height: 160%;
         text-align: center;
         letter-spacing: -0.02em;
         margin-bottom: 16px;

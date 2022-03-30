@@ -148,7 +148,7 @@ export default {
     &-text {
       font-weight: 400;
       font-size: 22px;
-      line-height: 120%;
+      line-height: 160%;
       line-break:auto;
       @media screen and (max-width: 1286px) {
         font-size: 20px;

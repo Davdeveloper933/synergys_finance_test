@@ -120,7 +120,7 @@ export default {
     &-text {
       font-weight: 400;
       font-size: 22px;
-      line-height: 120%;
+      line-height: 160%;
       line-break: auto;
       @media screen and (max-width: 1286px) {
         font-size: 20px;
@@ -172,7 +172,7 @@ export default {
       font-family: 'Geometria',sans-serif;
       font-weight: 700;
       font-size: 20px;
-      line-height: 120%;
+      line-height: 160%;
       letter-spacing: -0.02em;
     }
     &__img {

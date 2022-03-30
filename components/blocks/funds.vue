@@ -99,7 +99,7 @@ export default {
   &__text {
     font-weight: 100;
     font-size: 22px;
-    line-height: 120%;
+    line-height: 160%;
     padding-top: 24px;
     width: 40vw;
     line-break: auto;
@@ -206,7 +206,7 @@ export default {
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
-        line-height: 120%;
+        line-height: 160%;
         letter-spacing: -0.02em;
         margin-bottom: 16px;
         @media screen and (max-width: 992px) {
@@ -220,7 +220,7 @@ export default {
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
-        line-height: 120%;
+        line-height: 160%;
       }
     }
   }
