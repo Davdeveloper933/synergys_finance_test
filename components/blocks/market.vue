@@ -54,24 +54,24 @@ export default {
     return {
       cards: [
         {
+          title: "24/7 Monitoring",
+          desc: "Capella Finance is taking care of your positions for you 24/7, making sure they are always at optimum",
+          img: "monitoring"
+        },
+        {
           title: "100% trustless",
           desc: "We ensure that the system is 100% trustless and only you’ve got access to your funds.",
           img: "trustless"
         },
         {
-          title: "DeFi Smart Vaults",
-          desc: "Managing your liquidity intelligently by quantitative strategies",
-          img: "smart"
-        },
-        {
-          title: "24/7 Monitoring",
-          desc: "Synergys Finance is taking care of your positions for you 24/7, making sure they are always at optimum",
-          img: "monitoring"
-        },
-        {
           title: "Multichain",
           desc: "Smart contract account owned by the users to manage & optimize funds across any number of protocols",
           img: "multichain"
+        },
+        {
+          title: "DeFi Smart Vaults",
+          desc: "Managing your liquidity intelligently by quantitative strategies",
+          img: "smart"
         },
         {
           title: "Affiliate Program",
@@ -87,7 +87,12 @@ export default {
 <style lang="scss" scoped>
 
 .section-market {
-  background-image: radial-gradient(132.75% 132.47% at 27.01% -50.38%,rgba(225, 125, 125, 1) 0%, rgba(0, 144, 249, 0.312) 0%, rgba(15, 15, 55, 0.4) 100%);
+  background-image:
+    radial-gradient(132.75% 132.47% at 27.01% -50.38%, rgba(0, 144, 249, 0.4) 0%, rgba(15, 15, 55, 0.4) 100%),
+    radial-gradient(40% 83% at 57% -36%, #E5517D, transparent),
+    url("assets/market_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 16px;
   @media screen and (max-width: 425px) {

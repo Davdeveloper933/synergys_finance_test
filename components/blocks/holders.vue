@@ -1,7 +1,7 @@
 <template>
   <div class="section-holders section-padding-top">
     <div class="section-holders__absolute-img">
-      <img class="ellipse" src="img/holders_ellipse.png" alt="">
+      <img class="sphere" src="img/ellipse-img.png" alt="">
     </div>
     <div class="container">
       <div class="section-holders__flex-box">
@@ -23,7 +23,7 @@
           <div class="section-holders__question">
             <div class="gradient-line"></div>
             <h3 class="section-holders__question-text">
-              Synergys.finance is the first web 3.0 protocol that introduce the practice of paying crypto dividends to those who buy and hold the SYN tokens.
+              is the first web 3.0 protocol that pays crypto dividends to СAPE holders
             </h3>
           </div>
           <div class="section-holders__info section-padding-bottom">
@@ -64,6 +64,7 @@ export default {
   position: relative;
   //background: radial-gradient(40px 40px at 40px 40px, rgba(207,141,224,0.78) 0%, rgba(0,0,0,1) 55%);
   background: linear-gradient(0deg, rgba(17, 18, 26, 0.56), rgba(17, 18, 26, 0.56)), radial-gradient(35.38% 92.38% at 68.4% 98.28%, #A36DB6 0%, rgba(15, 15, 55, 0.46) 100%);
+  background-size: cover;
   @media screen and (max-width: 767px) {
     background: linear-gradient(0deg, rgba(17, 18, 26, 0.56), rgba(17, 18, 26, 0.56)), radial-gradient(230.38% 55.38% at 9.4% 50.28%, #D16497 0%, rgba(15, 15, 55, 0.46) 100%);
   }
@@ -72,16 +73,11 @@ export default {
     background-image: linear-gradient(to right,rgba(255, 136, 214, 1),rgba(128, 85, 251, 0.7106),rgba(99, 138, 189, 0.82));
   }
   &__absolute-img {
-    position: relative;
-    .ellipse {
-      position: absolute;
-      right: 0;
-      top: -90vh;
-    }
-    .ball {
-      position: absolute;
-      right: 17vw;
-      top: -22vh;
+    position: absolute;
+    top: -5%;
+    right: 0;
+    @media screen and (max-width: 992px) {
+      display: none;
     }
   }
   .section-title {

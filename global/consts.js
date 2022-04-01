@@ -1,22 +1,34 @@
 export const menuItems = [
   {
     label: "Welcome",
-    url: "#"
+    url: "#home"
   },
   {
     label: "Funds",
-    url: "#"
+    url: "#funds"
   },
   {
     label: "Choose market",
-    url: "#"
+    url: "#market"
   },
   {
     label: "Best Yields",
-    url: "#"
+    url: "#holders"
+  },
+  {
+    label: "How it works",
+    url: "#how-it-works"
+  },
+  {
+    label: "Liquidity",
+    url: "#liquidity"
+  },
+  {
+    label: "Top blockchains",
+    url: "#top-blockchains"
   },
   {
     label: "Contact",
-    url: "#"
+    url: "#contact"
   },
 ];

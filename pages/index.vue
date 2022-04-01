@@ -6,18 +6,18 @@
         <img src="img/section-bg_1.jpg" alt="">
       </picture>
       <site-header />
-      <intro-section />
-      <funds-section />
-      <watch-video-section />
+      <intro-section id="home" />
+      <funds-section id="funds" />
+      <watch-video-section id="video" />
     </div>
-    <the-market-section />
+    <the-market-section id="market" />
     <div class="section-bg-container">
-    <holders-section />
-    <how-it-works-section />
-    <liquidity-section />
-    <top-blockchains-section />
+    <holders-section id="holders" />
+    <how-it-works-section id="how-it-works" />
+    <liquidity-section id="liquidity" />
+    <top-blockchains-section id="top-blockchains" />
     </div>
-    <site-footer />
+    <site-footer id="contact" />
   </div>
 </template>
 

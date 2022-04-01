@@ -1,6 +1,8 @@
 <template>
-  <div class="section-funds">
-    <ui-button class="section-funds__button">Join Whitelist</ui-button>
+  <div ref="section" class="section-funds" @scroll="handleScroll">
+    <ui-button :class="{'fixed': scrolled}" class="section-funds__button">
+      Join Whitelist
+    </ui-button>
     <div class="container">
       <div class="section-funds__intro">
         <h2 class="section-funds__title">
@@ -63,7 +65,31 @@ import SectionTitle from "~/components/ui/ui-section-title.global";
 import UiButton from "~/components/ui/ui-button.global";
 export default {
   name: "FundsSection",
-  components: {UiButton, SectionTitle}
+  components: {UiButton, SectionTitle},
+  data() {
+    return {
+      sectionOffsetHeight: null,
+      scrolled: false
+    };
+  },
+  mounted() {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.sectionOffsetTop = this.$refs.section.offsetTop;
+      console.log(this.sectionOffsetTop,window.scrollY);
+      if (window.scrollY > this.sectionOffsetTop) {
+        this.scrolled = true;
+      }else {
+        this.scrolled = false;
+      }
+    }
+  }
 };
 </script>
 
@@ -132,10 +158,16 @@ export default {
   }
   &__button {
     padding: 15px 40px;
-    position: absolute;
-    right: 20px;
-    top: 37px;
-    @media screen and (max-width: 767px) {
+    position: sticky;
+    z-index: 8888;
+    top: 59%;
+    left: 85%;
+    &.fixed {
+      position: fixed;
+      right: 2%;
+      left: unset;
+    }
+    @media screen and (max-width: 992px) {
       display: none;
     }
   }

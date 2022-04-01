@@ -27,7 +27,7 @@
               <div class="section-intro__browser-searchbar">
               <span class="section-intro__browser-searchbar__text">
                 <img src="svg/lock.svg" alt="">
-                synergys.finance
+                capella.finance
               </span>
                 <img class="refresh-img" src="svg/refresh.svg" alt="">
               </div>
@@ -43,7 +43,7 @@
             <div class="section-intro__browser__content__intro">
               <img src="svg/globe.svg" alt="">
               <h3 class="section-intro__browser__content__title">
-                Synergys Finance is multichain yield optimization platform for Liquidity Providers.
+                Capella Finance is multichain yield optimization platform for Liquidity Providers.
                 Full decentralisation ensures <span class="profit100">100% of profits</span> are given back to СAPE stakers
               </h3>
             </div>
@@ -85,7 +85,7 @@
                 <input class="ui-input" type="text" placeholder="Your e-mail">
                 <ui-button>Join Whitelist</ui-button>
                 <div class="contact-link">
-                  <a href="#">contact@synergys.finance</a>
+                  <a href="#">contact@capella.finance</a>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default {
 <style lang="scss" scoped>
 
 .section-intro {
-  padding-top: 56px;
+  padding-top: 112px;
   @media screen and (max-width: 425px) {
     padding-top: 0;
   }
@@ -395,9 +395,9 @@ export default {
     .spline-left {
       position: absolute;
       left: 0;
-      top: 24%;
-      z-index: 2;
-      width: 19vw;
+      top: 40%;
+      z-index: 25;
+      width: 15vw;
       @media screen and (max-width: 850px) {
         width: 13vw;
         top: 50vh;
@@ -415,7 +415,7 @@ export default {
       position: absolute;
       right: 0;
       top: -20vh;
-      z-index: 2;
+      z-index: 25;
       width: 19vw;
       @media screen and (max-width: 1199px) {
         top: -11vh;
@@ -456,7 +456,7 @@ export default {
       position: relative;
       width: 69vw;
       border-radius: 12px;
-      background-image: url("assets/img/browser_bg.jpg");
+      background-image: url("assets/browser_bg.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       @media screen and (max-width: 1200px) {
@@ -474,24 +474,44 @@ export default {
       }
       .ethereum-logo {
         position: absolute;
-        top: 30%;
-        left: -4%;
+        top: 51%;
+        left: -35px;
         z-index: 20;
+        animation: top-bottom-first 5s infinite;
+        transform: rotateY(0) scale(1);
+        transition: transform 1s;
+        width: 70px;
+        &:hover {
+          transform: rotateY(1turn) scale(1.5);
+        }
         @media screen and (max-width: 500px) {
           width: 70px;
           top: 50%;
-          left: 1%;
+          left: -8%;
+        }
+        @media screen and (max-width: 320px) {
+          display: none;
         }
       }
       .bitcoin-logo {
         position: absolute;
-        top: 70%;
+        top: 23.5%;
         right: -4%;
         z-index: 20;
+        animation: top-bottom-second 5s infinite;
+        transition: transform 1s;
+        transform: rotateY(0) scale(1);
+        width: 70px;
+        &:hover {
+          transform: rotateY(1turn) scale(1.5);
+        }
         @media screen and (max-width: 500px) {
           width: 70px;
-          right: 0%;
+          right: -8%;
           top: 40%;
+        }
+        @media screen and (max-width: 320px) {
+          display: none;
         }
       }
     }
@@ -510,6 +530,30 @@ export default {
   width: 100%;
   display: block;
   margin-bottom: 16px;
+}
+
+@keyframes top-bottom-second {
+  0% {
+    top: 23.5%;
+  }
+  50% {
+    top: 51%;
+  }
+  100% {
+    top: 23.5%;
+  }
+}
+
+@keyframes top-bottom-first {
+  0% {
+    top: 51%;
+  }
+  50% {
+    top: 23.5%;
+  }
+  100% {
+    top: 51%;
+  }
 }
 
 </style>

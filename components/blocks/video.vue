@@ -45,8 +45,10 @@ export default {
       width: 100%;
     }
     .section-title {
+      max-width: 430px;
       @media screen and (max-width: 992px) {
         width: 67vw;
+        max-width: 100%;
       }
       @media screen and (max-width: 767px) {
         width: 75vw;
@@ -67,6 +69,7 @@ export default {
   }
   &__wrapper {
     display: flex;
+    justify-content: space-between;
     @media screen and (max-width: 992px) {
       flex-direction: column;
       width: fit-content;
@@ -106,17 +109,21 @@ export default {
       top: 49%;
       right: 0;
       z-index: -1;
-      @media screen and (max-width: 1092px) {
-        top: 55%;
-        right: -6vw;
+      @media screen and (max-width: 425px) {
+        top: 49%;
+        right: -26vw;
       }
       @media screen and (max-width: 992px) {
         right: -21vw;
         top: 71%;
       }
-      @media screen and (max-width: 425px) {
-        top: 49%;
-        right: -26vw;
+      @media screen and (max-width: 1092px) {
+        top: 55%;
+        right: -6vw;
+      }
+      @media screen and (max-width: 1200px) {
+        top: 67%;
+        right: -12vw;
       }
     }
   }
