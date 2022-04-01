@@ -95,6 +95,11 @@ export default {
   background-size: contain;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 16px;
+  @media screen and (max-width: 992px) {
+    background-image:
+      radial-gradient(132.75% 132.47% at 27.01% -50.38%, rgba(0, 144, 249, 0.4) 0%, rgba(15, 15, 55, 0.4) 100%),
+      radial-gradient(40% 83% at 57% -36%, #E5517D, transparent);
+  }
   @media screen and (max-width: 425px) {
     border-radius: 24px;
   }
