@@ -72,28 +72,34 @@
         >
           {{ item.label }}
         </a>
-        <ui-button>Join Whitelist</ui-button>
+        <a href="#home" @click="closeDesktopMenu">
+          <ui-button>Join Whitelist</ui-button>
+        </a>
       </div>
     </div>
     <div v-show="mobileMenuIsOpen" class="menu-opened-mobile">
       <img class="menu-opened-mobile-line" src="svg/line.svg" alt="">
       <div class="menu-opened-mobile__content">
-        <a v-for="(item,indx) in menuItems" :key="indx" class="menu-opened-mobile__link" :href="item.url">
+        <a v-for="(item,indx) in menuItems" @click="closeMobileMenu" :key="indx" class="menu-opened-mobile__link" :href="item.url">
           {{ item.label }}
         </a>
       </div>
       <img class="menu-opened-mobile-line" src="svg/line.svg" alt="">
       <div class="menu-opened-mobile__buttons">
-        <ui-button>Join Whitelist</ui-button>
+        <a href="#home" @click="closeMobileMenu">
+          <ui-button>Join Whitelist</ui-button>
+        </a>
         <ui-button class="menu-opened-mobile__buttons-contact">contact@capella.finance</ui-button>
       </div>
     </div>
     <div v-show="menuIsOpen" class="menu-opened menu-opened-tablet">
       <div class="menu-opened__content">
-        <a v-for="(item,indx) in menuItems" :key="indx" class="menu-opened__link" :href="item.url">
+        <a v-for="(item,indx) in menuItems" @click="closeDesktopMenu" :key="indx" class="menu-opened__link" :href="item.url">
           {{ item.label }}
         </a>
-        <ui-button>Join Whitelist</ui-button>
+        <a href="#home" @click="closeDesktopMenu">
+          <ui-button>Join Whitelist</ui-button>
+        </a>
         <ui-button class="menu-opened-mobile__buttons-contact">Contact@capella.finance</ui-button>
       </div>
     </div>
@@ -308,7 +314,7 @@ export default {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
-  padding: 9px 24px;
+  padding: 9px 12px 8px 12px;
   &:not(&-left) {
     @media screen and (max-width: 767px) {
       display: none;

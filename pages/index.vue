@@ -16,6 +16,7 @@
     <how-it-works-section id="how-it-works" />
     <liquidity-section id="liquidity" />
     <top-blockchains-section id="top-blockchains" />
+    <section-road-map id="roadmap" />
     </div>
     <site-footer id="contact" />
   </div>
@@ -32,9 +33,11 @@ import HoldersSection from "~/components/blocks/holders";
 import HowItWorksSection from "~/components/blocks/howItWorks";
 import LiquiditySection from "~/components/blocks/liquidity";
 import TopBlockchainsSection from "~/components/blocks/topBlockchains";
+import SectionRoadMap from "~/components/blocks/roadMap";
 export default {
   name: "IndexPage",
   components: {
+    SectionRoadMap,
     TopBlockchainsSection,
     LiquiditySection,
     HowItWorksSection,

@@ -37,7 +37,9 @@
           <img class="ethereum-logo" src="img/ethereum_logo.png" alt="">
           <img class="bitcoin-logo" src="img/bitcoin_logo.png" alt="">
 <!--          <div class="section-intro__browser__inner-img">-->
-            <ui-down-btn />
+          <ui-btn>
+            <img src="svg/down.svg" alt="">
+          </ui-btn>
 <!--          </div>-->
           <div class="section-intro__browser__content">
             <div class="section-intro__browser__content__intro">
@@ -97,12 +99,12 @@
 </template>
 
 <script>
+import UiBtn from "~/components/ui/ui-btn.global";
 import SectionTitle from "~/components/ui/ui-section-title.global";
-import UiDownBtn from "~/components/ui/ui-down-btn.global";
 import UiButton from "~/components/ui/ui-button.global";
 export default {
   name: "IntroSection",
-  components: {UiButton, UiDownBtn, SectionTitle}
+  components: {UiBtn, UiButton, SectionTitle}
 };
 </script>
 
@@ -442,7 +444,7 @@ export default {
         display: none;
       }
     }
-    .ui-down-btn {
+    .ui-btn {
       position: absolute;
       left: 50%;
       z-index: 20;

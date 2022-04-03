@@ -1,8 +1,10 @@
 <template>
   <div ref="section" class="section-funds" @scroll="handleScroll">
-    <ui-button :class="{'fixed': scrolled}" class="section-funds__button">
-      Join Whitelist
-    </ui-button>
+    <a href="#home">
+      <ui-button :class="{'fixed': scrolled}" class="section-funds__button">
+        Join Whitelist
+      </ui-button>
+    </a>
     <div class="container">
       <div class="section-funds__intro">
         <h2 class="section-funds__title">
@@ -160,16 +162,21 @@ export default {
     padding: 15px 40px;
     position: sticky;
     z-index: 8888;
-    top: 59%;
-    left: 85%;
-    &.fixed {
-      position: fixed;
-      right: 2%;
-      left: unset;
+    top: 89%;
+    left: 84vw;
+    @media screen and (max-width: 1359px) {
+      left: 84vw;
+    }
+    @media screen and (max-width: 1200px) {
+      left: 82vw;
     }
     @media screen and (max-width: 992px) {
       display: none;
     }
+    &.fixed {
+      position: fixed;
+    }
+
   }
   &__steps {
     margin-top: 60px;
@@ -219,15 +226,6 @@ export default {
         }
       }
       &__number {
-        //font-family: 'Geometria',sans-serif;
-        //font-style: normal;
-        //font-weight: 500;
-        //font-size: 72px;
-        //text-transform: uppercase;
-        //background:radial-gradient(rgba(48, 111, 224, 1),rgba(255, 141, 162, 1),rgba(47, 64, 113, 0.38), rgba(255, 85, 244, 1));
-        //-webkit-background-clip: text;
-        //-webkit-text-stroke: 6px transparent;
-        //color: #18191F;
         margin-bottom: 24px;
         @media screen and (max-width: 767px) {
           width: 53px;

@@ -76,6 +76,7 @@ export default {
     top: 0;
     @media screen and (max-width: 1200px) {
       width: 70%;
+      top: 20%;
     }
     @media screen and (max-width: 992px) {
       width: 57%;
@@ -105,12 +106,12 @@ export default {
   }
   &__info {
     margin-top: 64px;
-    width: 17vw;
+    width: 28vw;
     position: relative;
     z-index: 2;
-    @media screen and (max-width: 1200px) {
-      width: 25vw;
-    }
+    /*@media screen and (max-width: 1200px) {*/
+      /*width: 25vw;*/
+    /*}*/
     @media screen and (max-width: 992px) {
       width: 35vw;
     }

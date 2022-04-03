@@ -15,7 +15,8 @@
           </section-title>
         </div>
         <div class="section-video__video-block">
-          <iframe src="https://www.youtube.com/embed/oSzRI5y6tK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/oSzRI5y6tK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
           <div class="section-video__video-block__dark-img">
             <img src="img/dark.png" alt="">
           </div>

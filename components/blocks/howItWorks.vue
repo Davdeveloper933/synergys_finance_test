@@ -114,7 +114,9 @@
         <div class="section-how-it-works__buttons-box">
           <button class="section-how-it-works__buttons-box__skip-btn">Skip process</button>
           <div class="section-how-it-works__buttons-box__scroll-down">
-            <ui-down-btn/>
+            <ui-btn>
+              <img src="svg/down.svg" alt="">
+            </ui-btn>
             <span class="section-how-it-works__buttons-box__scroll-down__text">Scroll down</span>
           </div>
         </div>
@@ -125,10 +127,10 @@
 
 <script>
 import SectionTitle from "~/components/ui/ui-section-title.global";
-import UiDownBtn from "~/components/ui/ui-down-btn.global";
+import UiBtn from "../ui/ui-btn.global";
 export default {
   name: "HowItWorksSection",
-  components: {UiDownBtn, SectionTitle}
+  components: {UiBtn, SectionTitle}
 };
 </script>
 

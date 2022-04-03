@@ -146,7 +146,7 @@ export default {
   &__cards {
     &-wrapper {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 50% 50%;
       gap: 1rem;
       @media screen and (max-width: 992px) {
         margin-top: 40px;
@@ -165,7 +165,7 @@ export default {
     box-sizing: border-box;
     border-radius: 8px;
     padding: 40px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1240px) {
       padding: 30px;
     }
     @media screen and (max-width: 575px) {
