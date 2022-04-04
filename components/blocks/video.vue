@@ -4,21 +4,40 @@
       <div class="section-video__wrapper">
         <div class="section-video__title">
           <picture>
-            <source media="(max-width:425px)" srcset="img/ellipse_mobile.png">
-            <img class="section-video__ellipse" src="img/ellipse_desktop.png" alt="">
+            <source media="(max-width:425px)" srcset="img/ellipse_mobile.png" />
+            <img
+              class="section-video__ellipse"
+              src="img/ellipse_desktop.png"
+              alt=""
+            />
           </picture>
           <section-title class="small">
             watch video about
-            <template #stroked-text>
-              our invest strategy
-            </template>
+            <template #stroked-text> our invest strategy </template>
           </section-title>
         </div>
         <div class="section-video__video-block">
-          <iframe src="https://www.youtube.com/embed/oSzRI5y6tK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
+          <div class="section-video__video-block-content" @click="showVideo = !showVideo">
+            <div class="section-video__video-block-content__banner" v-if="!showVideo">
+              <div class="section-video__video-block-content__banner-content">
+                <img src="img/play.png" alt="">
+                <span class="section-video__video-block-content__banner__text">
+                  Play video
+                </span>
+              </div>
+            </div>
+            <iframe
+              v-show="showVideo"
+              src="https://www.youtube.com/embed/oSzRI5y6tK4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
           <div class="section-video__video-block__dark-img">
-            <img src="img/dark.png" alt="">
+            <img src="img/dark.png" alt="" />
           </div>
         </div>
       </div>
@@ -30,12 +49,16 @@
 import SectionTitle from "~/components/ui/ui-section-title.global";
 export default {
   name: "WatchVideoSection",
-  components: {SectionTitle}
+  components: { SectionTitle },
+  data () {
+    return {
+      showVideo: false
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-
 .section-video {
   padding-top: 73px;
   padding-bottom: 96px;
@@ -84,10 +107,15 @@ export default {
     margin-top: 115px;
     position: relative;
     width: 59%;
-    iframe {
-      border-radius: 16px;
+    &-content {
       width: 590px;
       height: 411px;
+      cursor: pointer;
+      transition: opacity .3s;
+      opacity: 1;
+      &.hidden {
+        opacity: 0;
+      }
       @media screen and (max-width: 1092px) {
         width: 100%;
       }
@@ -98,6 +126,43 @@ export default {
       @media screen and (max-width: 575px) {
         height: 300px;
       }
+      &__banner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("assets/banner.jpg");
+        background-size: cover;
+        border-radius: 16px;
+        background-color: rgba(17, 18, 26, 0.56);
+        background-blend-mode: overlay;
+        &__text {
+          text-align: center;
+          margin-top: 14px;
+          font-family: 'Geometria',sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          text-align: center;
+          letter-spacing: -0.02em;
+        }
+        &-content {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    iframe {
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     @media screen and (max-width: 992px) {
       width: 100%;
@@ -129,5 +194,4 @@ export default {
     }
   }
 }
-
 </style>

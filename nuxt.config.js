@@ -2,12 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
   router: {
-    base: "/synergys_finance_test/"
+    base: "/synergys_finance_test/",
   },
   styleResources: {
-    scss: [
-      "@/assets/scss/index.scss",
-    ]
+    scss: ["@/assets/scss/index.scss"],
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -28,13 +26,12 @@ export default {
   css: [
     {
       src: "@/assets/scss/index.scss",
-      lang: "scss"
-    }
+      lang: "scss",
+    },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

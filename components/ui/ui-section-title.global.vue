@@ -2,14 +2,14 @@
   <h2 v-if="!reversed" class="section-title">
     <slot />
     <span class="section-title__stroked-text">
-     <slot name="stroked-text" />
+      <slot name="stroked-text" />
     </span>
   </h2>
   <h2 v-else class="section-title">
     <span class="section-title__stroked-text">
       <slot />
     </span>
-     <slot name="normal-text" />
+    <slot name="normal-text" />
   </h2>
 </template>
 
@@ -19,16 +19,15 @@ export default {
   props: {
     reversed: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
-
 .section-title {
-  font-family: 'Geometria',sans-serif;
+  font-family: 'Geometria', sans-serif;
   font-style: normal;
   font-size: 96px;
   font-weight: 700;
@@ -38,7 +37,7 @@ export default {
   &__stroked-text {
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FFFFFF;
+    -webkit-text-stroke-color: #ffffff;
   }
   &.small {
     font-size: 56px;
@@ -60,5 +59,4 @@ export default {
     }
   }
 }
-
 </style>

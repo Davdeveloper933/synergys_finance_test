@@ -4,26 +4,93 @@
   box-sizing: border-box;
 }
 
-
 ul[class],
 ol[class] {
   padding: 0;
 }
 
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol[class], ul[class], li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, body.blog {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol[class],
+ul[class],
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+body.blog {
   margin: 0;
   padding: 0;
   border: 0;
@@ -33,17 +100,29 @@ time, mark, audio, video, body.blog {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -54,13 +133,13 @@ table {
 }
 
 a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
-  transition: .3s;
+  transition: 0.3s;
 
   &:hover {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -69,7 +148,7 @@ button,
 textarea,
 select {
   font: inherit;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 button,
@@ -103,7 +182,7 @@ button:focus {
   background-color: transparent;
 }
 
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -117,12 +196,12 @@ img {
 }
 
 body {
-  font-family: "TT Commons", sans-serif;
-  color: #FFFFFF;
+  font-family: 'TT Commons', sans-serif;
+  color: #ffffff;
   font-style: normal;
   font-weight: 400;
   background-color: #000000;
-  background-image: url("./static/img/noize.png");
+  background-image: url('./static/img/noize.png');
   overflow-x: hidden;
 }
 
@@ -140,9 +219,11 @@ body {
 
 .container {
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 0 60px;
+  position: relative;
   @media screen and (max-width: 1300px) {
-    padding: 0 40px;
+    padding: 0 60px;
+    margin: 0 auto;
   }
   @media screen and (max-width: 767px) {
     padding: 0 20px;
@@ -168,7 +249,11 @@ body {
 }
 
 .gradient-line {
-  background: linear-gradient(0.25turn,rgba(255, 141, 162, 1), rgba(48, 111, 224, 1));
+  background: linear-gradient(
+    0.25turn,
+    rgba(255, 141, 162, 1),
+    rgba(48, 111, 224, 1)
+  );
   width: 100%;
   height: 1px;
 }

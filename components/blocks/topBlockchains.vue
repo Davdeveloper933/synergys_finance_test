@@ -1,59 +1,65 @@
 <template>
-  <div class="section-top-blockchains section-padding-top section-padding-bottom">
+  <div
+    class="section-top-blockchains section-padding-top section-padding-bottom"
+  >
     <div class="section-top-blockchains__absolute-img">
-      <img src="img/splines.png" alt="">
+      <img src="img/splines.png" alt="" />
     </div>
     <div class="container">
       <div class="section-top-blockchains__title">
         <span class="section-top-blockchains__subtitle section-title-subtitle">
-              All vaults autocompound at an optimal rate and
+          All vaults autocompound at an optimal rate and
         </span>
         <section-title class="small">
           diversified Across
-          <template #stroked-text>
-            top blockchains
-          </template>
+          <template #stroked-text> top blockchains </template>
         </section-title>
       </div>
       <div class="section-top-blockchains__cards">
-        <div v-for="(card,indx) in cards" :key="indx" class="section-top-blockchains__cards-item">
+        <div
+          v-for="(card, indx) in cards"
+          :key="indx"
+          class="section-top-blockchains__cards-item"
+        >
           <div class="section-top-blockchains__cards-item__title">
             <section-title class="small">
-                {{ card.title }}
-              <template #stroked-text>
-                pool
-              </template>
+              {{ card.title }}
+              <template #stroked-text> pool </template>
             </section-title>
           </div>
           <h4 class="section-top-blockchains__cards-item__subtitle">
             {{ card.subtitle }}
           </h4>
           <div class="section-top-blockchains__cards-item__tokens">
-            <div
-                  v-for="(token,token_indx) in card.tokens"
-                 :key="token_indx" >
+            <div v-for="(token, token_indx) in card.tokens" :key="token_indx">
               <div class="section-top-blockchains__cards-item__tokens-item">
-                <span class="section-top-blockchains__cards-item__tokens-item__text">
+                <span
+                  class="section-top-blockchains__cards-item__tokens-item__text"
+                >
                   {{ token.name }}
                 </span>
-                  <img
-                    class="section-top-blockchains__cards-item__tokens-item__img"
-                    :src="`img/tokens/${token.img}.png`" alt="">
+                <img
+                  class="section-top-blockchains__cards-item__tokens-item__img"
+                  :src="`img/tokens/${token.img}.png`"
+                  alt=""
+                />
               </div>
             </div>
           </div>
           <div class="section-top-blockchains__cards-item__bottom">
             <div
-              v-for="(item,item_indx) in card.bottomItems"
+              v-for="(item, item_indx) in card.bottomItems"
               :key="item_indx"
               class="section-top-blockchains__cards-item__bottom-item"
             >
-              <h4 class="section-top-blockchains__cards-item__bottom-item__text">
+              <h4
+                class="section-top-blockchains__cards-item__bottom-item__text"
+              >
                 {{ item.text }}
               </h4>
               <div
-                    class="section-top-blockchains__cards-item__bottom-item__value"
-                   :class="item.color"
+                class="section-top-blockchains__cards-item__bottom-item__value"
+                :class="item.color"
               >
                 <span>{{ item.value }}</span>
               </div>
@@ -69,8 +75,8 @@
 import SectionTitle from "~/components/ui/ui-section-title.global";
 export default {
   name: "TopBlockchainsSection",
-  components: {SectionTitle},
-  data () {
+  components: { SectionTitle },
+  data() {
     return {
       cards: [
         {
@@ -79,49 +85,49 @@ export default {
           tokens: [
             {
               name: "usdt",
-              img: "usdt-blue"
+              img: "usdt-blue",
             },
             {
               name: "usdt",
-              img: "usdt-blue"
+              img: "usdt-blue",
             },
             {
               name: "usdt",
-              img: "usdt-dark"
+              img: "usdt-dark",
             },
             {
               name: "usdt",
-              img: "usdt-yellow"
+              img: "usdt-yellow",
             },
             {
               name: "ust",
-              img: "ust"
+              img: "ust",
             },
             {
               name: "dai",
-              img: "dai"
+              img: "dai",
             },
             {
               name: "mai",
-              img: "mai"
+              img: "mai",
             },
             {
               name: "mim",
-              img: "mim"
+              img: "mim",
             },
           ],
           bottomItems: [
             {
               text: "Pool Deposits",
               value: "$ 22 400 000",
-              color: "blue"
+              color: "blue",
             },
             {
               text: "Earning rate",
               value: "22%",
-              color: "green"
-            }
-          ]
+              color: "green",
+            },
+          ],
         },
         {
           title: "Coin",
@@ -129,29 +135,29 @@ export default {
           tokens: [
             {
               name: "eth",
-              img: "eth"
+              img: "eth",
             },
             {
               name: "btc",
-              img: "eth"
+              img: "eth",
             },
             {
               name: "usd",
-              img: "eth"
-            }
+              img: "eth",
+            },
           ],
           bottomItems: [
             {
               text: "Pool Deposits",
               value: "$ 32 400 000",
-              color: "blue"
+              color: "blue",
             },
             {
               text: "Earning rate",
               value: "55%",
-              color: "yellow"
-            }
-          ]
+              color: "yellow",
+            },
+          ],
         },
         {
           title: "DEX",
@@ -159,56 +165,61 @@ export default {
           tokens: [
             {
               name: "eth",
-              img: "eth"
+              img: "eth",
             },
             {
               name: "luna",
-              img: "luna"
+              img: "luna",
             },
             {
               name: "bnb",
-              img: "bnb"
+              img: "bnb",
             },
             {
               name: "avax",
-              img: "avax"
+              img: "avax",
             },
             {
               name: "ftm",
-              img: "ftm"
+              img: "ftm",
             },
             {
               name: "sol",
-              img: "usdt-dark"
+              img: "usdt-dark",
             },
             {
               name: "matic",
-              img: "matic"
-            }
+              img: "matic",
+            },
           ],
           bottomItems: [
             {
               text: "Pool Deposits",
               value: "$ 28 400 000",
-              color: "blue"
+              color: "blue",
             },
             {
               text: "Earning rate",
               value: "180%",
-              color: "purple"
-            }
-          ]
-        }
-      ]
+              color: "purple",
+            },
+          ],
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .section-top-blockchains {
-  background: radial-gradient(134.35% 134.32% at 19.1% -52.22%, rgba(0, 144, 249, 0.429) 0%, rgba(15, 15, 55, 0.55) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(17, 18, 26, 0.56);
+  background: radial-gradient(
+        134.35% 134.32% at 19.1% -52.22%,
+        rgba(0, 144, 249, 0.429) 0%,
+        rgba(15, 15, 55, 0.55) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    rgba(17, 18, 26, 0.56);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 24px;
   position: relative;
@@ -236,7 +247,7 @@ export default {
     }
   }
   &__cards {
-    margin-top:48px;
+    margin-top: 48px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 3.5fr));
     grid-gap: 20px;
@@ -247,20 +258,24 @@ export default {
       grid-template-columns: 100%;
     }
     &-item {
-      background: linear-gradient(270deg, rgba(255, 162, 223, 0.08) -4.07%, rgba(105, 159, 255, 0.08) 47.91%);
+      background: linear-gradient(
+        270deg,
+        rgba(255, 162, 223, 0.08) -4.07%,
+        rgba(105, 159, 255, 0.08) 47.91%
+      );
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 8px;
       padding: 40px;
       @media screen and (max-width: 1200px) {
         padding: 30px;
       }
-     &__title {
-       margin-bottom: 24px;
-       .section-title {
-         font-weight: 700;
-         font-size: 32px;
-       }
-     }
+      &__title {
+        margin-bottom: 24px;
+        .section-title {
+          font-weight: 700;
+          font-size: 32px;
+        }
+      }
       &__subtitle {
         margin-bottom: 15px;
         font-weight: 500;
@@ -348,16 +363,16 @@ export default {
               font-size: 14px;
             }
             &.blue {
-              background: #4276F6;
+              background: #4276f6;
             }
             &.green {
-              background: #6CAC89;
+              background: #6cac89;
             }
             &.yellow {
-              background: #E1861B;
+              background: #e1861b;
             }
             &.purple {
-              background: #E17B99;
+              background: #e17b99;
             }
           }
         }
@@ -365,6 +380,4 @@ export default {
     }
   }
 }
-
-
 </style>

@@ -5,86 +5,81 @@
         <span class="section-intro__subtitle">WELCOME TO </span>
         <section-title>
           Capella
-          <template #stroked-text>
-            Finance
-          </template>
+          <template #stroked-text> Finance </template>
         </section-title>
       </h1>
       <div class="section-intro__browser">
         <picture>
-          <source media="(max-width: 375px)" srcset="img/neon_small.png">
-          <img class="neon-img" src="img/neon.png" alt="">
+          <source media="(max-width: 375px)" srcset="img/neon_small.png" />
+          <img class="neon-img" src="img/neon.png" alt="" />
         </picture>
 
-        <img class="spline-left" src="img/spline_left.png" alt="">
-        <img class="spline-right" src="img/spline_right.png" alt="">
+        <img class="spline-left" src="img/spline_left.png" alt="" />
+        <img class="spline-right" src="img/spline_right.png" alt="" />
         <div class="section-intro__browser__inner">
           <div class="section-intro__browser-header">
             <div class="section-intro__browser-header-wrapper">
               <div>
-                <img src="img/traffic_lights.png" alt="">
+                <img src="img/traffic_lights.png" alt="" />
               </div>
               <div class="section-intro__browser-searchbar">
-              <span class="section-intro__browser-searchbar__text">
-                <img src="svg/lock.svg" alt="">
-                capella.finance
-              </span>
-                <img class="refresh-img" src="svg/refresh.svg" alt="">
+                <span class="section-intro__browser-searchbar__text">
+                  <img src="svg/lock.svg" alt="" />
+                  capella.finance
+                </span>
+                <img class="refresh-img" src="svg/refresh.svg" alt="" />
               </div>
-              <img src="svg/toolbar.svg" alt="">
+              <img src="svg/toolbar.svg" alt="" />
             </div>
           </div>
-          <img class="ethereum-logo" src="img/ethereum_logo.png" alt="">
-          <img class="bitcoin-logo" src="img/bitcoin_logo.png" alt="">
-<!--          <div class="section-intro__browser__inner-img">-->
+          <img class="ethereum-logo" src="img/ethereum_logo.png" alt="" />
+          <img class="bitcoin-logo" src="img/bitcoin_logo.png" alt="" />
+          <!--          <div class="section-intro__browser__inner-img">-->
           <ui-btn>
-            <img src="svg/down.svg" alt="">
+            <img src="svg/down.svg" alt="" />
           </ui-btn>
-<!--          </div>-->
+          <!--          </div>-->
           <div class="section-intro__browser__content">
             <div class="section-intro__browser__content__intro">
-              <img src="svg/globe.svg" alt="">
+              <img src="svg/globe.svg" alt="" />
               <h3 class="section-intro__browser__content__title">
-                Capella Finance is multichain yield optimization platform for Liquidity Providers.
-                Full decentralisation ensures <span class="profit100">100% of profits</span> are given back to СAPE stakers
+                Capella Finance is multichain yield optimization platform for
+                Liquidity Providers. Full decentralisation ensures
+                <span class="profit100">100% of profits</span> are given back to
+                СAPE stakers
               </h3>
             </div>
             <div class="section-intro__browser__content__timer">
               <h3 class="section-intro__browser__content__timer-title">
-                Turn on our auto-pilot, relax,
-                and prepare for the Private round!
+                Turn on our auto-pilot, relax, and prepare for the Private
+                round!
               </h3>
               <h3 class="timer-starts-in">Starts in</h3>
               <div class="timer-block">
                 <div class="timer-block__wrapper">
                   <div class="timer-block-item">
-                    <p class="timer-block-item__value">12
-                    </p>
+                    <p class="timer-block-item__value">12</p>
                     <p class="timer-block-item__time">day</p>
                   </div>
-                  <img class="timer-dot" src="img/dot-white.png" alt="">
+                  <img class="timer-dot" src="img/dot-white.png" alt="" />
                   <div class="timer-block-item">
-                    <p class="timer-block-item__value">8
-                    </p>
+                    <p class="timer-block-item__value">8</p>
                     <p class="timer-block-item__time">hour</p>
                   </div>
-                  <img class="timer-dot" src="img/dot-white.png" alt="">
+                  <img class="timer-dot" src="img/dot-white.png" alt="" />
                   <div class="timer-block-item">
-                    <p class="timer-block-item__value">24
-                    </p>
+                    <p class="timer-block-item__value">24</p>
                     <p class="timer-block-item__time">min</p>
                   </div>
-                  <img class="timer-dot" src="img/dot-pink.png" alt="">
+                  <img class="timer-dot" src="img/dot-pink.png" alt="" />
                   <div class="timer-block-item">
-                    <p class="timer-block-item__value">
-                      37
-                    </p>
+                    <p class="timer-block-item__value">37</p>
                     <p class="timer-block-item__time">sec</p>
                   </div>
                 </div>
               </div>
               <div class="section-intro__browser__content__timer-buttons">
-                <input class="ui-input" type="text" placeholder="Your e-mail">
+                <input class="ui-input" type="text" placeholder="Your e-mail" />
                 <ui-button>Join Whitelist</ui-button>
                 <div class="contact-link">
                   <a href="#">contact@capella.finance</a>
@@ -104,12 +99,11 @@ import SectionTitle from "~/components/ui/ui-section-title.global";
 import UiButton from "~/components/ui/ui-button.global";
 export default {
   name: "IntroSection",
-  components: {UiBtn, UiButton, SectionTitle}
+  components: { UiBtn, UiButton, SectionTitle },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .section-intro {
   padding-top: 112px;
   @media screen and (max-width: 425px) {
@@ -186,7 +180,7 @@ export default {
     margin: 40px auto 0 auto;
     .neon-img {
       left: 50%;
-      transform: translate(-50%,0);
+      transform: translate(-50%, 0);
       position: absolute;
       top: -4vh;
     }
@@ -218,7 +212,7 @@ export default {
         font-weight: 400;
         font-size: 13px;
         letter-spacing: -0.02em;
-        color: #9288B1;
+        color: #9288b1;
         @media screen and (max-width: 991px) {
           margin-right: 95px;
         }
@@ -232,7 +226,7 @@ export default {
     }
     &-header {
       background: rgba(16, 20, 44, 0.7);
-      padding:0 20px;
+      padding: 0 20px;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
       &-wrapper {
@@ -249,8 +243,16 @@ export default {
       position: relative;
       &__timer {
         border: 1px solid rgba(255, 255, 255, 0.08);
-        background-image: linear-gradient(226.76deg, rgba(255, 162, 223, 0.08) -4.53%, rgba(105, 159, 255, 0.08) 46.5%),
-        linear-gradient(0deg, rgba(119, 126, 139, 0.14), rgba(119, 126, 139, 0.14));
+        background-image: linear-gradient(
+            226.76deg,
+            rgba(255, 162, 223, 0.08) -4.53%,
+            rgba(105, 159, 255, 0.08) 46.5%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(119, 126, 139, 0.14),
+            rgba(119, 126, 139, 0.14)
+          );
         border-radius: 12px;
         min-width: 386px;
         max-width: 386px;
@@ -282,7 +284,7 @@ export default {
             font-weight: 400;
             font-size: 14px;
             text-decoration-line: underline;
-            color: #FFFFFF;
+            color: #ffffff;
             opacity: 0.56;
             text-align: center;
             margin-top: 22px;
@@ -309,7 +311,7 @@ export default {
           font-size: 12px;
           text-align: center;
           letter-spacing: 0.04em;
-          color: #FF7A82;
+          color: #ff7a82;
           margin-top: 8px;
         }
         .timer {
@@ -331,7 +333,7 @@ export default {
                 font-weight: 100;
                 font-size: 14px;
                 letter-spacing: -0.01em;
-                color: #FFFFFF;
+                color: #ffffff;
                 opacity: 0.32;
               }
             }
@@ -382,13 +384,13 @@ export default {
         position: relative;
         display: inline-block;
         &:after {
-          content: "";
+          content: '';
           position: absolute;
           bottom: -6px;
           left: 0;
           width: 100%;
           height: 8px;
-          background-image: url("./static/img/profit-line.png");
+          background-image: url('./static/img/profit-line.png');
           background-repeat: no-repeat;
           background-size: 100%;
         }
@@ -458,7 +460,7 @@ export default {
       position: relative;
       width: 69vw;
       border-radius: 12px;
-      background-image: url("assets/browser_bg.jpg");
+      background-image: url('assets/browser_bg.jpg');
       background-repeat: no-repeat;
       background-size: 100% 100%;
       @media screen and (max-width: 1200px) {
@@ -469,7 +471,7 @@ export default {
       }
       @media screen and (max-width: 767px) {
         width: 89vw;
-        background-image: url("./static/img/browser_bg-mobile.jpg");
+        background-image: url('./static/img/browser_bg-mobile.jpg');
       }
       @media screen and (max-width: 425px) {
         width: 100%;
@@ -521,13 +523,13 @@ export default {
 }
 
 .ui-input {
-  background: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 40px;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.01em;
-  color: #565A68;
+  color: #565a68;
   padding: 18px 24px;
   width: 100%;
   display: block;
@@ -557,5 +559,4 @@ export default {
     top: 51%;
   }
 }
-
 </style>

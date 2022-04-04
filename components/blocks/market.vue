@@ -4,19 +4,19 @@
       <div class="section-market__flex-wrap">
         <div class="section-market__text-wrapper">
           <div class="section-market__title">
-        <span class="section-market__subtitle section-title-subtitle">
-          Dont have the time to chase
-        </span>
+            <span class="section-market__subtitle section-title-subtitle">
+              Dont have the time to chase
+            </span>
             <section-title class="small">
-              the market for better APYs? <br>
-              <template #stroked-text>
-                we got you!
-              </template>
+              the market for better APYs? <br />
+              <template #stroked-text> we got you! </template>
             </section-title>
             <div class="section-market__question">
               <div class="gradient-line"></div>
               <h3 class="section-market__question-text">
-                Don’t have hours and hours to find and learn about new DeFi projects and services? We maintain and optimize your position 24/7
+                Don’t have hours and hours to find and learn about new DeFi
+                projects and services? We maintain and optimize your position
+                24/7
               </h3>
             </div>
           </div>
@@ -24,12 +24,12 @@
         <div class="section-market__cards">
           <div class="section-market__cards-wrapper">
             <div
-              v-for="(card,indx) in cards"
+              v-for="(card, indx) in cards"
               :key="indx"
               class="section-market__card-item"
             >
               <div class="section-market__card-item__img">
-                <img :src="`img/cards/${card.img}.png`" alt="">
+                <img :src="`img/cards/${card.img}.png`" alt="" />
               </div>
               <h3 class="section-market__card-item__title">
                 {{ card.title }}
@@ -49,56 +49,61 @@
 import SectionTitle from "~/components/ui/ui-section-title.global";
 export default {
   name: "TheMarketSection",
-  components: {SectionTitle},
-  data () {
+  components: { SectionTitle },
+  data() {
     return {
       cards: [
         {
           title: "24/7 Monitoring",
           desc: "Capella Finance is taking care of your positions for you 24/7, making sure they are always at optimum",
-          img: "monitoring"
+          img: "monitoring",
         },
         {
           title: "100% trustless",
           desc: "We ensure that the system is 100% trustless and only you’ve got access to your funds.",
-          img: "trustless"
+          img: "trustless",
         },
         {
           title: "Multichain",
           desc: "Smart contract account owned by the users to manage & optimize funds across any number of protocols",
-          img: "multichain"
+          img: "multichain",
         },
         {
           title: "DeFi Smart Vaults",
           desc: "Managing your liquidity intelligently by quantitative strategies",
-          img: "smart"
+          img: "smart",
         },
         {
           title: "Affiliate Program",
           desc: "Earn up to 50% commissions when your audience invest in our Liquidity Pools",
-          img: "affiliate"
-        }
-      ]
+          img: "affiliate",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .section-market {
-  background-image:
-    radial-gradient(132.75% 132.47% at 27.01% -50.38%, rgba(0, 144, 249, 0.4) 0%, rgba(15, 15, 55, 0.4) 100%),
-    radial-gradient(40% 83% at 57% -36%, #E5517D, transparent),
-    url("assets/market_bg.png");
+  background-image: radial-gradient(
+      132.75% 132.47% at 27.01% -50.38%,
+      rgba(0, 144, 249, 0.4) 0%,
+      rgba(15, 15, 55, 0.4) 100%
+    ),
+    radial-gradient(40% 83% at 57% -36%, #e5517d, transparent),
+    url('assets/market_bg.png');
   background-repeat: no-repeat;
   background-size: contain;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 16px;
   @media screen and (max-width: 992px) {
-    background-image:
-      radial-gradient(132.75% 132.47% at 27.01% -50.38%, rgba(0, 144, 249, 0.4) 0%, rgba(15, 15, 55, 0.4) 100%),
-      radial-gradient(40% 83% at 57% -36%, #E5517D, transparent);
+    background-image: radial-gradient(
+        132.75% 132.47% at 27.01% -50.38%,
+        rgba(0, 144, 249, 0.4) 0%,
+        rgba(15, 15, 55, 0.4) 100%
+      ),
+      radial-gradient(40% 83% at 57% -36%, #e5517d, transparent);
   }
   @media screen and (max-width: 425px) {
     border-radius: 24px;
@@ -160,7 +165,11 @@ export default {
     }
   }
   &__card-item {
-    background: linear-gradient(270deg, rgba(255, 162, 223, 0.14) -4.07%, rgba(105, 159, 255, 0.14) 47.91%);
+    background: linear-gradient(
+      270deg,
+      rgba(255, 162, 223, 0.14) -4.07%,
+      rgba(105, 159, 255, 0.14) 47.91%
+    );
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-sizing: border-box;
     border-radius: 8px;
@@ -179,14 +188,13 @@ export default {
     }
     &__title {
       margin: 24px 0 16px 0;
-      font-family: 'Geometria',sans-serif;
+      font-family: 'Geometria', sans-serif;
       font-weight: 700;
       font-size: 20px;
       line-height: 160%;
       letter-spacing: -0.02em;
     }
     &__img {
-
     }
     &__desc {
       font-weight: 400;
@@ -195,5 +203,4 @@ export default {
     }
   }
 }
-
 </style>

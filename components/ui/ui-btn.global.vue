@@ -5,22 +5,20 @@
 </template>
 
 <script>
-  export default {
-    name: "UiBtn"
-  };
+export default {
+  name: "UiBtn",
+};
 </script>
 
 <style lang="scss" scoped>
-
-  .ui-btn {
-    border-radius: 50%;
-    background: rgba(164, 194, 245, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    min-width: 40px;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
+.ui-btn {
+  border-radius: 50%;
+  background: rgba(164, 194, 245, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

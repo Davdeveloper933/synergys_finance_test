@@ -1,47 +1,56 @@
 <template>
   <div
- ref="header" class="site-header"
-:class="{'opened': menuIsOpen,'opened-mobile': mobileMenuIsOpen,
-  'closed': !menuIsOpen,'headroom--unpinned': scrolled}"
-@scroll="handleScroll"
+    ref="header"
+    class="site-header"
+    :class="{
+      opened: menuIsOpen,
+      'opened-mobile': mobileMenuIsOpen,
+      closed: !menuIsOpen,
+      'headroom--unpinned': scrolled,
+    }"
+    @scroll="handleScroll"
   >
     <div class="site-header__wrapper">
       <div class="site-header__logo site-header-item site-header__logo-desktop">
-        <a v-if="!menuIsOpen" href="/" >
-          <img src="svg/logo.svg" alt="">
+        <a v-if="!menuIsOpen" href="/">
+          <img src="svg/logo.svg" alt="" />
         </a>
         <div v-else>
           <a role="button" href="/" class="contact-link contact-link-left">
             <span class="contact-link__text">Capella Finance</span>
           </a>
-      </div>
+        </div>
       </div>
       <div class="site-header__logo site-header__logo-mobile">
-        <a v-if="!mobileMenuIsOpen" href="/" >
-          <img src="svg/logo.svg" alt="">
+        <a v-if="!mobileMenuIsOpen" href="/">
+          <img src="svg/logo.svg" alt="" />
         </a>
         <a v-else href="/">
-          <img src="svg/logo-text.svg" alt="">
+          <img src="svg/logo-text.svg" alt="" />
         </a>
       </div>
       <div class="site-header__logo site-header__logo-tablet">
         <a href="/">
-          <img src="svg/logo-text.svg" alt="">
+          <img src="svg/logo-text.svg" alt="" />
         </a>
       </div>
       <div class="menu-btn-container site-header-item">
         <div class="desktop-menu-btn">
-          <button v-if="!menuIsOpen" class="menu-btn" @click="menuIsOpen = !menuIsOpen">
+          <button
+            v-if="!menuIsOpen"
+            class="menu-btn"
+            @click="menuIsOpen = !menuIsOpen"
+          >
             <span class="menu-btn__text">Menu</span>
             <div class="menu-btn__icon_open">
-              <img src="svg/menu-open.svg" alt="">
+              <img src="svg/menu-open.svg" alt="" />
             </div>
           </button>
           <button v-else class="menu-btn" @click="menuIsOpen = !menuIsOpen">
             <span class="menu-btn__text">Close</span>
-<!--            <div class="menu-btn__icon_close" >-->
-              <img class="menu-btn__icon_close" src="svg/menu-close.svg" alt="">
-<!--            </div>-->
+            <!--            <div class="menu-btn__icon_close" >-->
+            <img class="menu-btn__icon_close" src="svg/menu-close.svg" alt="" />
+            <!--            </div>-->
           </button>
         </div>
       </div>
@@ -52,22 +61,27 @@
       </div>
       <div class="tablet-menu-btn">
         <button class="menu-btn rounded" @click="closeDesktopMenu">
-          <img v-if="!menuIsOpen" src="svg/menu-open.svg" alt="">
-          <img v-else src="svg/menu-close.svg" alt="">
+          <img v-if="!menuIsOpen" src="svg/menu-open.svg" alt="" />
+          <img v-else src="svg/menu-close.svg" alt="" />
         </button>
       </div>
       <div class="mobile-btn-container">
-        <button class="menu-btn rounded" @click="mobileMenuIsOpen = !mobileMenuIsOpen">
-          <img v-if="!mobileMenuIsOpen" src="svg/menu-open.svg" alt="">
-          <img v-else src="svg/menu-close.svg" alt="">
+        <button
+          class="menu-btn rounded"
+          @click="mobileMenuIsOpen = !mobileMenuIsOpen"
+        >
+          <img v-if="!mobileMenuIsOpen" src="svg/menu-open.svg" alt="" />
+          <img v-else src="svg/menu-close.svg" alt="" />
         </button>
       </div>
     </div>
     <div v-show="menuIsOpen" class="menu-opened menu-opened-desktop">
       <div class="menu-opened__content">
         <a
-          v-for="(item,indx) in menuItems"
-          :key="indx" class="menu-opened__link" :href="item.url"
+          v-for="(item, indx) in menuItems"
+          :key="indx"
+          class="menu-opened__link"
+          :href="item.url"
           @click="closeDesktopMenu"
         >
           {{ item.label }}
@@ -78,41 +92,57 @@
       </div>
     </div>
     <div v-show="mobileMenuIsOpen" class="menu-opened-mobile">
-      <img class="menu-opened-mobile-line" src="svg/line.svg" alt="">
+      <img class="menu-opened-mobile-line" src="svg/line.svg" alt="" />
       <div class="menu-opened-mobile__content">
-        <a v-for="(item,indx) in menuItems" @click="closeMobileMenu" :key="indx" class="menu-opened-mobile__link" :href="item.url">
+        <a
+          v-for="(item, indx) in menuItems"
+          :key="indx"
+          class="menu-opened-mobile__link"
+          :href="item.url"
+          @click="closeMobileMenu"
+        >
           {{ item.label }}
         </a>
       </div>
-      <img class="menu-opened-mobile-line" src="svg/line.svg" alt="">
+      <img class="menu-opened-mobile-line" src="svg/line.svg" alt="" />
       <div class="menu-opened-mobile__buttons">
         <a href="#home" @click="closeMobileMenu">
           <ui-button>Join Whitelist</ui-button>
         </a>
-        <ui-button class="menu-opened-mobile__buttons-contact">contact@capella.finance</ui-button>
+        <ui-button class="menu-opened-mobile__buttons-contact"
+          >contact@capella.finance</ui-button
+        >
       </div>
     </div>
     <div v-show="menuIsOpen" class="menu-opened menu-opened-tablet">
       <div class="menu-opened__content">
-        <a v-for="(item,indx) in menuItems" @click="closeDesktopMenu" :key="indx" class="menu-opened__link" :href="item.url">
+        <a
+          v-for="(item, indx) in menuItems"
+          :key="indx"
+          class="menu-opened__link"
+          :href="item.url"
+          @click="closeDesktopMenu"
+        >
           {{ item.label }}
         </a>
         <a href="#home" @click="closeDesktopMenu">
           <ui-button>Join Whitelist</ui-button>
         </a>
-        <ui-button class="menu-opened-mobile__buttons-contact">Contact@capella.finance</ui-button>
+        <ui-button class="menu-opened-mobile__buttons-contact"
+          >Contact@capella.finance</ui-button
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import {menuItems} from "~/global/consts";
+import { menuItems } from "~/global/consts";
 import UiButton from "~/components/ui/ui-button.global";
 export default {
   name: "SiteHeader",
-  components: {UiButton},
-  data () {
+  components: { UiButton },
+  data() {
     return {
       menuItems,
       menuIsOpen: false,
@@ -120,7 +150,7 @@ export default {
       limitPosition: 500,
       scrolled: false,
       lastPosition: 0,
-      headerOffsetHeight: null
+      headerOffsetHeight: null,
     };
   },
   mounted() {
@@ -131,30 +161,32 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    closeDesktopMenu () {
+    closeDesktopMenu() {
       this.menuIsOpen = !this.menuIsOpen;
     },
-    closeMobileMenu () {
+    closeMobileMenu() {
       this.mobileMenuIsOpen = !this.mobileMenuIsOpen;
     },
     handleScroll() {
       this.headerOffsetHeight = this.$refs.header.offsetHeight;
-      console.log(this.headerOffsetHeight,window.scrollY);
+      console.log(this.headerOffsetHeight, window.scrollY);
       if (window.scrollY > this.headerOffsetHeight) {
         this.scrolled = true;
-      }else if (window.scrollY > 0 && window.scrollY < this.headerOffsetHeight) {
+      } else if (
+        window.scrollY > 0 &&
+        window.scrollY < this.headerOffsetHeight
+      ) {
         this.scrolled = false;
       }
 
       this.lastPosition = window.scrollY;
       // this.scrolled = window.scrollY > 250;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .site-header {
   position: fixed;
   width: 100%;
@@ -162,7 +194,7 @@ export default {
   top: 0;
   z-index: 9999;
   overflow: hidden;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   background-color: transparent;
   background-image: unset;
   &.headroom {
@@ -171,8 +203,17 @@ export default {
   }
   &.headroom--unpinned {
     transform: translateY(0%);
-    background-color: #161C2E;
-    background-image: linear-gradient(0deg, rgba(13, 14, 21, 0.56), rgba(13, 14, 21, 0.56)), radial-gradient(129.71% 129.71% at 50% 1.86%, rgba(178, 96, 230, 0.648) 0%, rgba(0, 0, 0, 0) 100%);
+    background-color: #161c2e;
+    background-image: linear-gradient(
+        0deg,
+        rgba(13, 14, 21, 0.56),
+        rgba(13, 14, 21, 0.56)
+      ),
+      radial-gradient(
+        129.71% 129.71% at 50% 1.86%,
+        rgba(178, 96, 230, 0.648) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
   }
   &.headroom--pinned {
     transform: translateY(-100%);
@@ -232,8 +273,17 @@ export default {
     //overflow: hidden;
   }
   &.opened {
-    background-color: #161C2E;
-    background-image: linear-gradient(0deg, rgba(13, 14, 21, 0.56), rgba(13, 14, 21, 0.56)), radial-gradient(129.71% 129.71% at 50% 1.86%, rgba(178, 96, 230, 0.648) 0%, rgba(0, 0, 0, 0) 100%);
+    background-color: #161c2e;
+    background-image: linear-gradient(
+        0deg,
+        rgba(13, 14, 21, 0.56),
+        rgba(13, 14, 21, 0.56)
+      ),
+      radial-gradient(
+        129.71% 129.71% at 50% 1.86%,
+        rgba(178, 96, 230, 0.648) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
     position: fixed;
     height: 100%;
     width: 100%;
@@ -250,8 +300,17 @@ export default {
       }
     }
     &-mobile {
-      background-color: #161C2E;
-      background-image: linear-gradient(0deg, rgba(13, 14, 21, 0.56), rgba(13, 14, 21, 0.56)), radial-gradient(129.71% 129.71% at 50% 1.86%, rgba(178, 96, 230, 0.648) 0%, rgba(0, 0, 0, 0) 100%);
+      background-color: #161c2e;
+      background-image: linear-gradient(
+          0deg,
+          rgba(13, 14, 21, 0.56),
+          rgba(13, 14, 21, 0.56)
+        ),
+        radial-gradient(
+          129.71% 129.71% at 50% 1.86%,
+          rgba(178, 96, 230, 0.648) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
       position: fixed;
       height: 100%;
       width: 100%;
@@ -279,7 +338,7 @@ export default {
   padding: 9px 24px;
   &.rounded {
     border-radius: 50%;
-    padding:6px;
+    padding: 6px;
     justify-content: center;
     align-items: center;
     width: 35px;
@@ -304,7 +363,6 @@ export default {
     }
   }
   &__icon_close {
-
   }
 }
 
@@ -376,7 +434,7 @@ export default {
     display: none;
     justify-content: center;
     flex-direction: column;
-    padding:0 16px;
+    padding: 0 16px;
     @media screen and (max-width: 425px) {
       display: flex;
     }
@@ -396,7 +454,7 @@ export default {
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      padding:40px 50px 0 50px;
+      padding: 40px 50px 0 50px;
       .ui-button {
         font-size: 14px;
         padding: 14px 0;
@@ -433,5 +491,4 @@ export default {
     display: none;
   }
 }
-
 </style>

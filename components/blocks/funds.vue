@@ -1,7 +1,7 @@
 <template>
   <div ref="section" class="section-funds" @scroll="handleScroll">
     <a href="#home">
-      <ui-button :class="{'fixed': scrolled}" class="section-funds__button">
+      <ui-button :class="{ fixed: scrolled }" class="section-funds__button">
         Join Whitelist
       </ui-button>
     </a>
@@ -11,15 +11,14 @@
           <span class="section-title-subtitle">Dont know where to</span>
           <section-title class="small">
             put your
-            <template #stroked-text>
-              funds ?
-            </template>
+            <template #stroked-text> funds ? </template>
           </section-title>
         </h2>
         <div class="section-funds__question">
           <div class="gradient-line"></div>
           <h3 class="section-funds__text">
-            Did you ever wonder where to get the best returns for your funds? Dont wonder anymore, just use CAPE
+            Did you ever wonder where to get the best returns for your funds?
+            Dont wonder anymore, just use CAPE
           </h3>
         </div>
       </div>
@@ -27,33 +26,36 @@
         <div class="section-funds__steps-wrapper">
           <div class="section-funds__steps-item">
             <h3 class="section-funds__steps-item__number">
-              <img src="img/01.png" alt="">
+              <img src="img/01.png" alt="" />
             </h3>
-            <h4 class="section-funds__steps-item__title">Discover the best vaults</h4>
+            <h4 class="section-funds__steps-item__title">
+              Discover the best vaults
+            </h4>
             <p class="section-funds__steps-item__desc">
-              Capella Finance indexes every vault in the market and brings you the top results for the best assets in our multichain hybrid pools
+              Capella Finance indexes every vault in the market and brings you
+              the top results for the best assets in our multichain hybrid pools
             </p>
           </div>
           <div class="section-funds__steps-item">
             <h3 class="section-funds__steps-item__number">
-              <img src="img/02.png" alt="">
+              <img src="img/02.png" alt="" />
             </h3>
             <h4 class="section-funds__steps-item__title">
               CAPE holders receive 80% of the platform’s commission
             </h4>
             <p class="section-funds__steps-item__desc">
-              СAPE also acts as governance token, where holders get to vote on how best to distribute the remaining 20%. Become one of us now!
+              СAPE also acts as governance token, where holders get to vote on
+              how best to distribute the remaining 20%. Become one of us now!
             </p>
           </div>
           <div class="section-funds__steps-item">
             <h3 class="section-funds__steps-item__number">
-              <img src="img/03.png" alt="">
+              <img src="img/03.png" alt="" />
             </h3>
-            <h4 class="section-funds__steps-item__title">
-              Deposit your funds
-            </h4>
+            <h4 class="section-funds__steps-item__title">Deposit your funds</h4>
             <p class="section-funds__steps-item__desc">
-              Deposit your funds in the #1 vaults, maximize your APY and start earning immediately with no lock up period or minimum deposits.
+              Deposit your funds in the #1 vaults, maximize your APY and start
+              earning immediately with no lock up period or minimum deposits.
             </p>
           </div>
         </div>
@@ -67,11 +69,11 @@ import SectionTitle from "~/components/ui/ui-section-title.global";
 import UiButton from "~/components/ui/ui-button.global";
 export default {
   name: "FundsSection",
-  components: {UiButton, SectionTitle},
+  components: { UiButton, SectionTitle },
   data() {
     return {
       sectionOffsetHeight: null,
-      scrolled: false
+      scrolled: false,
     };
   },
   mounted() {
@@ -84,19 +86,19 @@ export default {
   methods: {
     handleScroll() {
       this.sectionOffsetTop = this.$refs.section.offsetTop;
-      console.log(this.sectionOffsetTop,window.scrollY);
+      console.log(this.sectionOffsetTop, window.scrollY);
       if (window.scrollY > this.sectionOffsetTop) {
         this.scrolled = true;
-      }else {
+      } else {
         this.scrolled = false;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/vars";
+@import 'assets/scss/vars';
 
 .section-funds {
   position: relative;
@@ -121,7 +123,6 @@ export default {
     position: relative;
     flex-wrap: wrap;
     @media screen and (max-width: 992px) {
-
     }
   }
   &__text {
@@ -176,7 +177,6 @@ export default {
     &.fixed {
       position: fixed;
     }
-
   }
   &__steps {
     margin-top: 60px;
@@ -232,7 +232,7 @@ export default {
         }
       }
       &__title {
-        font-family: 'Geometria',sans-serif;
+        font-family: 'Geometria', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -255,5 +255,4 @@ export default {
     }
   }
 }
-
 </style>

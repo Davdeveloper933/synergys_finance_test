@@ -4,18 +4,16 @@
       <div class="section-liquidity__flex-box">
         <div class="section-liquidity__text-wrapper">
           <div class="section-liquidity__title">
-           <span class="section-liquidity__subtitle section-title-subtitle">
+            <span class="section-liquidity__subtitle section-title-subtitle">
               Driving liquidity across Dexs
             </span>
             <section-title class="small" :reversed="true">
               Our
-              <template #normal-text>
-                Liquidity Pools
-              </template>
+              <template #normal-text> Liquidity Pools </template>
             </section-title>
           </div>
           <div class="section-liquidity__img">
-            <img src="img/liquidity_img.png" alt="">
+            <img src="img/liquidity_img.png" alt="" />
           </div>
           <div class="section-liquidity__info section-padding-bottom">
             <div class="section-liquidity__info-item">
@@ -23,7 +21,9 @@
                 Our Liquidity Pools
               </h4>
               <p class="section-liquidity__info-item__text">
-                With Capells Finance you can maximize your yield, contribute to risk management and create unparalleled opportunities to make the most of DeFi.
+                With Capells Finance you can maximize your yield, contribute to
+                risk management and create unparalleled opportunities to make
+                the most of DeFi.
               </p>
             </div>
             <div class="section-liquidity__info-item">
@@ -31,7 +31,9 @@
                 Get the highest long term yield in DeFi
               </h4>
               <p class="section-liquidity__info-item__text">
-                Capells Finance Liquidity provider protocol passes on all surplus generated directly to its users, ensuring their best interest.
+                Capells Finance Liquidity provider protocol passes on all
+                surplus generated directly to its users, ensuring their best
+                interest.
               </p>
             </div>
           </div>
@@ -45,14 +47,13 @@
 import SectionTitle from "~/components/ui/ui-section-title.global";
 export default {
   name: "LiquiditySection",
-  components: {SectionTitle}
+  components: { SectionTitle },
 };
 </script>
 
 <style lang="scss" scoped>
-
 .section-liquidity {
-  background-image: url("./static/img/liquidity_bg.jpg");
+  background-image: url('./static/img/liquidity_bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -66,7 +67,6 @@ export default {
     position: relative;
     overflow: hidden;
     @media screen and (max-width: 991px) {
-
     }
   }
   &__img {
@@ -110,7 +110,7 @@ export default {
     position: relative;
     z-index: 2;
     /*@media screen and (max-width: 1200px) {*/
-      /*width: 25vw;*/
+    /*width: 25vw;*/
     /*}*/
     @media screen and (max-width: 992px) {
       width: 35vw;
@@ -122,7 +122,7 @@ export default {
       align-items: start;
     }
     @media screen and (max-width: 575px) {
-     display: block;
+      display: block;
     }
     @media screen and (max-width: 600px) {
       width: 100%;
@@ -135,7 +135,7 @@ export default {
         width: 100%;
       }
       &__title {
-        font-family: 'Geometria',sans-serif;
+        font-family: 'Geometria', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
@@ -153,5 +153,4 @@ export default {
     }
   }
 }
-
 </style>

@@ -13,9 +13,9 @@ module.exports = {
   // add your custom rules here
   rules: {
     quotes: [2, "double", { avoidEscape: true }],
-    semi: [2, "always"],
+    semi: 0,
     "vue/no-v-html": 0,
     "no-console": "off",
-    "no-multiple-empty-lines": ["error", { max: 4 }]
+    "no-irregular-whitespace": "off"
   },
 };

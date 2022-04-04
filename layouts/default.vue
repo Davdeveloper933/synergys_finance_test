@@ -1,13 +1,11 @@
 <template>
-    <Nuxt />
+  <Nuxt />
 </template>
 
 <script>
 export default {
-  name: "DefaultLayout"
+  name: "DefaultLayout",
 };
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

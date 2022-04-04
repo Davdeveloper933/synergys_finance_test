@@ -1,19 +1,18 @@
 <template>
   <button class="ui-button">
-    <slot/>
+    <slot />
   </button>
 </template>
 
 <script>
 export default {
-  name: "UiButton"
+  name: "UiButton",
 };
 </script>
 
 <style lang="scss" scoped>
-
 .ui-button {
-  background: linear-gradient(90deg, #FF7D9C -30.17%, #1460FF 74.79%);
+  background: linear-gradient(90deg, #ff7d9c -30.17%, #1460ff 74.79%);
   border-radius: 40px;
   padding: 14px 82px;
   font-weight: 500;
@@ -21,7 +20,6 @@ export default {
   display: inline-block;
   text-align: center;
   letter-spacing: -0.01em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
 </style>
