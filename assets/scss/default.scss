@@ -190,6 +190,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -246,6 +250,10 @@ body {
   @media screen and (max-width: 992px) {
     padding-bottom: 75px;
   }
+}
+
+.section-margin-top {
+  margin-top: -20px;
 }
 
 .gradient-line {

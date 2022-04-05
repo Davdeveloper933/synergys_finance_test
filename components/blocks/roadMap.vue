@@ -192,11 +192,13 @@ export default {
 <style lang="scss" scoped>
 .section-roadmap {
   position: relative;
-  background: radial-gradient(
+  background-image: radial-gradient(
     144.34% 505.62% at -64.89% 180.52%,
     rgba(40, 45, 173, 0.154) 0%,
     rgba(15, 15, 55, 0.55) 100%
   );
+  margin-top: -20px;
+  background-color: rgba(15, 15, 55, 1);
   &__top-block {
     display: flex;
     align-items: center;

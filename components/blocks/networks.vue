@@ -121,8 +121,10 @@
 <style lang="scss" scoped>
 
   .section-networks {
-    background: radial-gradient(83.55% 202.69% at 96.15% -92.24%, rgba(40, 45, 173, 0.0825) 0%, rgba(20, 15, 55, 0.374) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background-image: radial-gradient(83.55% 202.69% at 96.15% -92.24%, rgba(40, 45, 173, 0.0825) 0%, rgba(20, 15, 55, 0.374) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     position: relative;
+    margin-top: -20px;
+    background-color: rgba(20, 15, 55, 1);
     &__top-block {
       display: flex;
       position: relative;
@@ -277,10 +279,10 @@
   .neon-img {
     position: absolute;
     left: 50%;
-    bottom: -65px;
+    bottom: -45px;
     transform: translate(-50%,0);
     @media screen and (max-width: 413px) {
-      bottom: -44px;
+      bottom: -24px;
     }
   }
 </style>

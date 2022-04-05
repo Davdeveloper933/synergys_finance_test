@@ -64,7 +64,7 @@ export default {
 .section-holders {
   position: relative;
   //background: radial-gradient(40px 40px at 40px 40px, rgba(207,141,224,0.78) 0%, rgba(0,0,0,1) 55%);
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(17, 18, 26, 0.56),
       rgba(17, 18, 26, 0.56)
@@ -75,6 +75,9 @@ export default {
       rgba(15, 15, 55, 0.46) 100%
     );
   background-size: cover;
+  background-color: rgba(17, 18, 26, 1);
+  border-radius: 16px;
+  z-index: 1;
   @media screen and (max-width: 767px) {
     background: linear-gradient(
         0deg,

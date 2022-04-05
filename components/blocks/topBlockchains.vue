@@ -213,7 +213,7 @@ export default {
 
 <style lang="scss" scoped>
 .section-top-blockchains {
-  background: radial-gradient(
+  background-image: radial-gradient(
         134.35% 134.32% at 19.1% -52.22%,
         rgba(0, 144, 249, 0.429) 0%,
         rgba(15, 15, 55, 0.55) 100%
@@ -223,6 +223,9 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 24px;
   position: relative;
+  margin-top: -20px;
+  background-color: rgba(15, 15, 55, 1);
+  z-index: 2;
   &__absolute-img {
     position: absolute;
     right: 0;

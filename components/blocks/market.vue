@@ -97,6 +97,8 @@ export default {
   background-size: contain;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 16px;
+  background-color: rgba(15, 15, 55, 1);
+  z-index: 2;
   @media screen and (max-width: 992px) {
     background-image: radial-gradient(
         132.75% 132.47% at 27.01% -50.38%,

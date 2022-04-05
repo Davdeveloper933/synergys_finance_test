@@ -13,7 +13,6 @@
           <source media="(max-width: 375px)" srcset="img/neon_small.png" />
           <img class="neon-img" src="img/neon.png" alt="" />
         </picture>
-
         <img class="spline-left" src="img/spline_left.png" alt="" />
         <img class="spline-right" src="img/spline_right.png" alt="" />
         <div class="section-intro__browser__inner">
@@ -106,9 +105,6 @@ export default {
 <style lang="scss" scoped>
 .section-intro {
   padding-top: 112px;
-  @media screen and (max-width: 425px) {
-    padding-top: 0;
-  }
   &__title {
     position: relative;
     width: fit-content;

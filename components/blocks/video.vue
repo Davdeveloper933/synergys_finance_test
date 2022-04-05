@@ -17,8 +17,8 @@
           </section-title>
         </div>
         <div class="section-video__video-block">
-          <div class="section-video__video-block-content" @click="showVideo = !showVideo">
-            <div class="section-video__video-block-content__banner" v-if="!showVideo">
+          <div class="section-video__video-block-content" >
+            <div class="section-video__video-block-content__banner" v-if="!showVideo" @click="playVideo">
               <div class="section-video__video-block-content__banner-content">
                 <img src="img/play.png" alt="">
                 <span class="section-video__video-block-content__banner__text">
@@ -26,15 +26,16 @@
                 </span>
               </div>
             </div>
-            <iframe
-              v-show="showVideo"
-              src="https://www.youtube.com/embed/oSzRI5y6tK4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            >
-            </iframe>
+<!--            <iframe-->
+<!--              v-show="showVideo"-->
+<!--              src="https://www.youtube.com/embed/oSzRI5y6tK4"-->
+<!--              title="YouTube video player"-->
+<!--              frameborder="0"-->
+<!--              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+<!--              allowfullscreen-->
+<!--            >-->
+<!--            </iframe>-->
+            <youtube :width="'100%'" :height="'100%'" :video-id="videoId" ref="youtube"></youtube>
           </div>
           <div class="section-video__video-block__dark-img">
             <img src="img/dark.png" alt="" />
@@ -52,7 +53,17 @@ export default {
   components: { SectionTitle },
   data () {
     return {
-      showVideo: false
+      showVideo: false,
+      videoId:"oSzRI5y6tK4",
+      playerVars: {
+        autoplay: 1
+      }
+    }
+  },
+  methods: {
+    playVideo() {
+      this.showVideo = true;
+      this.$refs.youtube.player.playVideo()
     }
   }
 };
@@ -113,6 +124,11 @@ export default {
       cursor: pointer;
       transition: opacity .3s;
       opacity: 1;
+      &::v-deep {
+        iframe {
+          border-radius: 16px;
+        }
+      }
       &.hidden {
         opacity: 0;
       }
@@ -155,14 +171,6 @@ export default {
           align-items: center;
         }
       }
-    }
-    iframe {
-      border-radius: 16px;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
     }
     @media screen and (max-width: 992px) {
       width: 100%;

@@ -117,6 +117,7 @@ export default {
     position: relative;
     background-color: rgba(15, 15, 55, 1);
     z-index: 3;
+    margin-top: -20px;
     &__wrapper {
       &-contact {
         display: flex;

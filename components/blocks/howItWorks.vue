@@ -134,7 +134,7 @@ export default {
 
 <style lang="scss" scoped>
 .section-how-it-works {
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(17, 18, 26, 0.56),
       rgba(17, 18, 26, 0.56)
@@ -143,10 +143,13 @@ export default {
         129.38% 129.38% at 58.4% -47.28%,
         rgba(202, 121, 253, 0.78) 0%,
         rgba(15, 15, 55, 0.46) 100%
-      )
+      );
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 24px;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(17, 18, 26, 1);
   @media screen and (max-width: 425px) {
     background: rgba(17, 18, 26, 0.56);
     border: 1px solid rgba(255, 255, 255, 0.16);

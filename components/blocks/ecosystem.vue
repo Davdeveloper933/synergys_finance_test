@@ -110,6 +110,8 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 24px;
   position: relative;
+  margin-top: -20px;
+  z-index: 2;
   &__absolute-img {
     position: absolute;
     top: 0;

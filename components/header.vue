@@ -372,7 +372,7 @@ export default {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
-  padding: 9px 12px 8px 12px;
+  padding: 9px 12px;
   &:not(&-left) {
     @media screen and (max-width: 767px) {
       display: none;
@@ -381,7 +381,7 @@ export default {
   &__text {
     font-weight: 500;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 8px;
     @media screen and (max-width: 1359px) {
       font-size: 14px;
     }

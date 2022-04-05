@@ -7,14 +7,14 @@
       </picture>
       <site-header />
       <intro-section id="home" />
-      <funds-section id="funds" />
-      <watch-video-section id="video" />
+      <funds-section class="section-margin-top" id="funds" />
+      <watch-video-section class="section-margin-top" id="video" />
     </div>
-    <the-market-section id="market" />
+    <the-market-section class="section-margin-top" id="market" />
     <div class="section-bg-container">
-      <holders-section id="holders" />
-      <how-it-works-section id="how-it-works" />
-      <liquidity-section id="liquidity" />
+      <holders-section class="section-margin-top" id="holders" />
+      <how-it-works-section class="section-margin-top" id="how-it-works" />
+      <liquidity-section class="section-margin-top" id="liquidity" />
       <top-blockchains-section id="top-blockchains" />
       <section-road-map id="roadmap" />
       <section-ecosystem id="ecosystem" />
