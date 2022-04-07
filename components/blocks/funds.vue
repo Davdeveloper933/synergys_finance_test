@@ -1,7 +1,7 @@
 <template>
-  <div ref="section" class="section-funds" @scroll="handleScroll">
+  <div ref="section" class="section-funds">
     <a href="#intro-form">
-      <ui-button :class="{ fixed: scrolled }" class="section-funds__button">
+      <ui-button class="section-funds__button">
         Join Whitelist
       </ui-button>
     </a>
@@ -76,13 +76,13 @@ export default {
       scrolled: false,
     };
   },
-  mounted() {
-    // eslint-disable-next-line nuxt/no-globals-in-created
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
+  // mounted() {
+  //   // eslint-disable-next-line nuxt/no-globals-in-created
+  //   window.addEventListener("scroll", this.handleScroll);
+  // },
+  // destroyed() {
+  //   window.removeEventListener("scroll", this.handleScroll);
+  // },
   methods: {
     handleScroll() {
       this.sectionOffsetTop = this.$refs.section.offsetTop;
@@ -161,10 +161,10 @@ export default {
   }
   &__button {
     padding: 15px 40px;
-    position: absolute;
     z-index: 8888;
     left: 84vw;
-    top: 6%;
+    position: fixed;
+    top: 89%;
     @media screen and (max-width: 1359px) {
       left: 84vw;
     }
@@ -175,8 +175,7 @@ export default {
       display: none;
     }
     &.fixed {
-      position: fixed;
-      top: 89%;
+
     }
   }
   &__steps {

@@ -12,14 +12,14 @@
   >
     <div class="site-header__wrapper">
       <div class="site-header__logo site-header-item site-header__logo-desktop">
-        <a v-if="!menuIsOpen" href="/">
+        <a href="/">
           <img src="svg/logo.svg" alt="" />
         </a>
-        <div v-else>
-          <a role="button" href="/" class="contact-link contact-link-left">
-            <span class="contact-link__text">Capella Finance</span>
-          </a>
-        </div>
+<!--        <div v-else>-->
+<!--          <a role="button" href="/" class="contact-link contact-link-left">-->
+<!--            <span class="contact-link__text">Capella Finance</span>-->
+<!--          </a>-->
+<!--        </div>-->
       </div>
       <div class="site-header__logo site-header__logo-mobile">
 <!--        <a v-if="!mobileMenuIsOpen" href="/">-->
@@ -218,7 +218,7 @@ export default {
     transform: translateY(-100%);
   }
   &-item {
-    min-width: 230px;
+    /*min-width: 230px;*/
     @media screen and (max-width: 1090px) {
       min-width: 144px;
     }
@@ -232,7 +232,7 @@ export default {
   &__wrapper {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 16px 120px;
     @media screen and (max-width: 1359px) {
@@ -241,12 +241,18 @@ export default {
     @media screen and (max-width: 991px) {
       padding: 16px 35px;
     }
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+    }
     @media screen and (max-width: 500px) {
       padding: 16px;
     }
   }
   &__logo {
     &-desktop {
+      flex: auto;
+      display: flex;
+      justify-content: flex-start;
       @media screen and (max-width: 767px) {
         display: none;
       }
@@ -507,9 +513,12 @@ export default {
 }
 
 .tablet-menu-btn {
-  /*display: none;*/
+  flex: auto;
+  display: flex;
+  justify-content: flex-end;
   @media screen and (max-width: 767px) {
     display: block;
+    flex: unset;
   }
   @media screen and (max-width: 425px) {
     display: none;

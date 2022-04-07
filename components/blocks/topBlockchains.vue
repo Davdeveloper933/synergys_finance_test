@@ -40,7 +40,7 @@
                 </span>
                 <img
                   class="section-top-blockchains__cards-item__tokens-item__img"
-                  :src="`img/tokens/${token.img}.png`"
+                  :src="`img/tokens/${token.img}`"
                   alt=""
                 />
               </div>
@@ -85,35 +85,35 @@ export default {
           tokens: [
             {
               name: "usdt",
-              img: "usdt-blue",
+              img: "usdt-blue.png",
             },
             {
               name: "usdc",
-              img: "usdt-blue",
+              img: "usdt-blue.png",
             },
             {
               name: "dei",
-              img: "usdt-dark",
+              img: "usdt-dark.png",
             },
             {
               name: "busb",
-              img: "usdt-yellow",
+              img: "usdt-yellow.png",
             },
             {
               name: "ust",
-              img: "ust",
+              img: "ust.png",
             },
             {
               name: "dai",
-              img: "dai",
+              img: "dai.png",
             },
             {
               name: "mai",
-              img: "mai",
+              img: "mai.png",
             },
             {
               name: "mim",
-              img: "mim",
+              img: "mim.png",
             },
           ],
           bottomItems: [
@@ -135,15 +135,15 @@ export default {
           tokens: [
             {
               name: "eth",
-              img: "eth",
+              img: "ethereum.svg",
             },
             {
               name: "btc",
-              img: "eth",
+              img: "bitcoin.svg",
             },
             {
               name: "usdt",
-              img: "eth",
+              img: "tether.svg",
             },
           ],
           bottomItems: [
@@ -165,31 +165,31 @@ export default {
           tokens: [
             {
               name: "eth",
-              img: "eth",
+              img: "ethereum.svg",
             },
             {
               name: "luna",
-              img: "luna",
+              img: "luna.png",
             },
             {
               name: "bnb",
-              img: "bnb",
+              img: "bnb.png",
             },
             {
               name: "avax",
-              img: "avax",
+              img: "avax.png",
             },
             {
               name: "ftm",
-              img: "ftm",
+              img: "ftm.png",
             },
             {
               name: "sol",
-              img: "usdt-dark",
+              img: "usdt-dark.png",
             },
             {
               name: "matic",
-              img: "matic",
+              img: "matic.png",
             },
           ],
           bottomItems: [
@@ -318,6 +318,8 @@ export default {
           }
           &__img {
             width: 14px;
+            height: 14px;
+            max-width: 14px;
           }
         }
       }

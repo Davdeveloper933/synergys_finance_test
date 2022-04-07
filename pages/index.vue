@@ -13,7 +13,7 @@
     <the-market-section class="section-margin-top" id="market" />
     <div class="section-bg-container">
       <holders-section class="section-margin-top" id="holders" />
-      <how-it-works-section class="section-margin-top" id="how-it-works" />
+      <how-it-works-section v-if="false" class="section-margin-top" id="how-it-works" />
       <liquidity-section class="section-margin-top" id="liquidity" />
       <top-blockchains-section id="top-blockchains" />
       <section-road-map id="roadmap" />

@@ -44,51 +44,59 @@
           <!--          </div>-->
           <div class="section-intro__browser__content">
             <div class="section-intro__browser__content__intro">
-              <img src="svg/globe.svg" alt="" />
+<!--              <img src="svg/globe.svg" alt="" />-->
               <h3 class="section-intro__browser__content__title">
-                Capella Finance is multichain yield optimization platform for
-                Liquidity Providers. Full decentralisation ensures
-                <span class="profit100">100% of profits</span> are given back to
-                СAPE stakers
-              </h3>
+                Capella Finance the easiest-to-use and most transparent products offering high returns for both beginners and experienced investors.              </h3>
             </div>
-            <div id="intro-form" class="section-intro__browser__content__timer">
-              <h3 class="section-intro__browser__content__timer-title">
-                Turn on our auto-pilot, relax, and prepare for the Private
-                round!
+            <div class="section-intro__browser__content-img">
+              <img src="img/laptop.png" alt="">
+            </div>
+            <div class="section-intro__browser__content-form">
+              <h3 class="section-intro__browser__content-form__title">
+                Join Whitelist
               </h3>
-              <h3 class="timer-starts-in">Starts in</h3>
-              <div class="timer-block">
-                <div class="timer-block__wrapper">
-                  <div class="timer-block-item">
-                    <p class="timer-block-item__value">12</p>
-                    <p class="timer-block-item__time">day</p>
-                  </div>
-                  <img class="timer-dot" src="img/dot-white.png" alt="" />
-                  <div class="timer-block-item">
-                    <p class="timer-block-item__value">8</p>
-                    <p class="timer-block-item__time">hour</p>
-                  </div>
-                  <img class="timer-dot" src="img/dot-white.png" alt="" />
-                  <div class="timer-block-item">
-                    <p class="timer-block-item__value">24</p>
-                    <p class="timer-block-item__time">min</p>
-                  </div>
-                  <img class="timer-dot" src="img/dot-pink.png" alt="" />
-                  <div class="timer-block-item">
-                    <p class="timer-block-item__value">37</p>
-                    <p class="timer-block-item__time">sec</p>
-                  </div>
-                </div>
-              </div>
-              <div class="section-intro__browser__content__timer-buttons">
-                <input class="ui-input" type="text" placeholder="Your e-mail" />
+              <div class="section-intro__browser__content-form__wrapper">
+                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" />
                 <ui-button>Join Whitelist</ui-button>
-                <div class="contact-link">
-                  <a href="#">contact@capella.finance</a>
-                </div>
               </div>
             </div>
+<!--            <div id="intro-form" class="section-intro__browser__content__timer">-->
+<!--              <h3 class="section-intro__browser__content__timer-title">-->
+<!--                Turn on our auto-pilot, relax, and prepare for the Private-->
+<!--                round!-->
+<!--              </h3>-->
+<!--              <h3 class="timer-starts-in">Starts in</h3>-->
+<!--              <div class="timer-block">-->
+<!--                <div class="timer-block__wrapper">-->
+<!--                  <div class="timer-block-item">-->
+<!--                    <p class="timer-block-item__value">12</p>-->
+<!--                    <p class="timer-block-item__time">day</p>-->
+<!--                  </div>-->
+<!--                  <img class="timer-dot" src="img/dot-white.png" alt="" />-->
+<!--                  <div class="timer-block-item">-->
+<!--                    <p class="timer-block-item__value">8</p>-->
+<!--                    <p class="timer-block-item__time">hour</p>-->
+<!--                  </div>-->
+<!--                  <img class="timer-dot" src="img/dot-white.png" alt="" />-->
+<!--                  <div class="timer-block-item">-->
+<!--                    <p class="timer-block-item__value">24</p>-->
+<!--                    <p class="timer-block-item__time">min</p>-->
+<!--                  </div>-->
+<!--                  <img class="timer-dot" src="img/dot-pink.png" alt="" />-->
+<!--                  <div class="timer-block-item">-->
+<!--                    <p class="timer-block-item__value">37</p>-->
+<!--                    <p class="timer-block-item__time">sec</p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="section-intro__browser__content__timer-buttons">
+                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" />
+                <ui-button>Join Whitelist</ui-button>
+<!--                <div class="contact-link">-->
+<!--                  <a href="#">contact@capella.finance</a>-->
+<!--                </div>-->
+              </div>
+<!--            </div>-->
           </div>
         </div>
       </div>
@@ -102,7 +110,7 @@ import SectionTitle from "~/components/ui/ui-section-title.global";
 import UiButton from "~/components/ui/ui-button.global";
 export default {
   name: "IntroSection",
-  components: { UiBtn, UiButton, SectionTitle },
+  components: {UiButton, UiBtn, SectionTitle },
 };
 </script>
 
@@ -274,6 +282,51 @@ export default {
       align-items: center;
       width: 100%;
       position: relative;
+      padding-bottom: 150px;
+      &-img {
+        width: 80%;
+        text-align: center;
+      }
+      &-form {
+        position: relative;
+        &__title {
+          font-family: 'Geometria',sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          text-align: center;
+          letter-spacing: -0.02em;
+          margin-bottom: 16px;
+          margin-top: 16px;
+        }
+        &__wrapper {
+          display: inline-flex;
+          align-items: center;
+          padding: 0;
+          max-width: 470px;
+          width: 100%;
+          position: relative;
+          @media screen and (max-width: 575px) {
+            display: none;
+          }
+          .ui-input {
+            display: flex;
+            margin-right: 0;
+            margin-bottom: 0;
+            min-width: 300px;
+            padding-right: 60px;
+            width: 470px;
+          }
+          .ui-button {
+            white-space: nowrap;
+            font-weight: 500;
+            position: absolute;
+            font-size: 16px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            right: 0;
+          }
+        }
+      }
       &__timer {
         border: 1px solid rgba(255, 255, 255, 0.08);
         background-image: linear-gradient(
@@ -308,6 +361,10 @@ export default {
         }
         &-buttons {
           margin-top: 20px;
+          display: none;
+          @media screen and (max-width: 575px) {
+            display: block;
+          }
           .ui-button {
             &::v-deep {
               padding: 18px 82px;
@@ -392,9 +449,7 @@ export default {
         line-height: 30px;
         max-width: 900px;
         width: 61vw;
-        //@media screen and (max-width: 1280px) {
-        //  font-size: 85px;
-        //}
+        margin-bottom: 16px;
         @media screen and (max-width: 1199px) {
           font-size: 20px;
         }
