@@ -2,11 +2,15 @@
   <div class="section-intro">
     <div class="">
       <h1 class="section-intro__title">
-        <span class="section-intro__subtitle">WELCOME TO </span>
-        <section-title>
-          Capella
-          <template #stroked-text> Finance </template>
-        </section-title>
+        <div class="section-intro__welcome-wrapper">
+          <span class="section-intro__welcome-wrapper__top-left-line"></span>
+          <span class="section-intro__welcome-wrapper__text">WELCOME TO</span>
+          <span class="section-intro__welcome-wrapper__top-right-line"></span>
+          <section-title>
+            Capella
+            <template #stroked-text> Finance </template>
+          </section-title>
+        </div>
       </h1>
       <div class="section-intro__browser">
         <picture>
@@ -48,7 +52,7 @@
                 СAPE stakers
               </h3>
             </div>
-            <div class="section-intro__browser__content__timer">
+            <div id="intro-form" class="section-intro__browser__content__timer">
               <h3 class="section-intro__browser__content__timer-title">
                 Turn on our auto-pilot, relax, and prepare for the Private
                 round!
@@ -105,6 +109,67 @@ export default {
 <style lang="scss" scoped>
 .section-intro {
   padding-top: 112px;
+  &__welcome-wrapper {
+    border-bottom: 0.6px solid #FFFFFF;
+    /*border-top: 0.6px solid #FFFFFF;*/
+    padding: 5px 0;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      border: none;
+      padding: 10px 0 0 0;
+    }
+    &__top-left-line {
+      width: 41%;
+      height: 0.6px;
+      top: 0;
+      display: block;
+      position: absolute;
+      background-color: #FFFFFF;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+    &__top-right-line {
+      top: 0;
+      width: 41%;
+      height: 0.6px;
+      display: block;
+      position: absolute;
+      right: 0;
+      background-color: #FFFFFF;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+    &__text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      position: absolute;
+      left: 50%;
+      top: -11px;
+      transform: translate(-50%, 0%);
+      @media screen and (max-width: 1280px) {
+        font-size: 15px;
+      }
+      @media screen and (max-width: 1199px) {
+        font-size: 15px;
+      }
+      @media screen and (max-width: 1020px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 991px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 850px) {
+        /*position: unset;*/
+        display: block;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+    }
+  }
   &__title {
     position: relative;
     width: fit-content;
@@ -139,34 +204,6 @@ export default {
         line-height: 55px;
         align-items: center;
       }
-    }
-  }
-  &__subtitle {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    text-transform: uppercase;
-    position: absolute;
-    left: -14%;
-    @media screen and (max-width: 1280px) {
-      font-size: 15px;
-    }
-    @media screen and (max-width: 1199px) {
-      font-size: 15px;
-    }
-    @media screen and (max-width: 1020px) {
-      font-size: 14px;
-      left: -16%;
-    }
-    @media screen and (max-width: 991px) {
-      font-size: 14px;
-      left: -17%;
-    }
-    @media screen and (max-width: 850px) {
-      position: unset;
-      display: block;
-      text-align: center;
-      margin-bottom: 8px;
     }
   }
   &__browser {

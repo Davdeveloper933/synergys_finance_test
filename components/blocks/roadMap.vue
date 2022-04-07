@@ -65,7 +65,8 @@
                       <div
                         class="section-roadmap__slider-item__bottom-list-item__img"
                       >
-                        <img src="img/check.png" alt="" />
+                        <img v-if="item.checked" src="img/check.png" alt="" />
+                        <img v-else src="img/uncheck.png" alt="" />
                       </div>
                       <p
                         class="section-roadmap__slider-item__bottom-list-item__text"
@@ -110,6 +111,7 @@ export default {
             "Capella Finance V1 : Multi-Strategy Vaults",
             "Private Round 1",
           ],
+          checked: true
         },
         {
           q: "q",
@@ -122,6 +124,7 @@ export default {
             "Private Round 2 & IDO on Launchpad",
             "$CAPE listing",
           ],
+          checked: false
         },
         {
           q: "q",
@@ -134,18 +137,20 @@ export default {
             "Launch innovative financial services support such as lending/borrowing and collateralisation",
             "Leverage liquidity mining across many DeFi protocols",
           ],
+          checked: false
         },
         {
           q: "q",
           numb: "4",
           title: "2nd quarter 2021",
-          button: "progress",
+          button: "future",
           points: [
             "Build an on-chain perpetual futures DEX with deep liquidity and builder-ready composability",
             "Card Issuing - Virtual or Physical custom branded physical Card with digital payment and NFC support. All covered with a few lines of code. ",
             "Prepare open platform to provide API and Whitelist services for third-party strategy providers.",
             "Phasing into an open platform, starts to collaborate with large financial instituitions and offers more comprehensive structural financial products.",
           ],
+          checked: false
         },
       ],
     };
@@ -163,13 +168,13 @@ export default {
       },
       breakpoints: {
         320: {
-          slidesPerView: 1.2,
+          slidesPerView: 1,
         },
         460: {
-          slidesPerView: 1.3,
+          slidesPerView: 1.1,
         },
         575: {
-          slidesPerView: 1.5,
+          slidesPerView: 1.1,
         },
         640: {
           slidesPerView: 2,

@@ -88,15 +88,15 @@ export default {
               img: "usdt-blue",
             },
             {
-              name: "usdt",
+              name: "usdc",
               img: "usdt-blue",
             },
             {
-              name: "usdt",
+              name: "dei",
               img: "usdt-dark",
             },
             {
-              name: "usdt",
+              name: "busb",
               img: "usdt-yellow",
             },
             {
@@ -119,12 +119,12 @@ export default {
           bottomItems: [
             {
               text: "Pool Deposits",
-              value: "$ 22 400 000",
+              value: "$ 19,532,483,985",
               color: "blue",
             },
             {
               text: "Earning rate",
-              value: "22%",
+              value: "35%",
               color: "green",
             },
           ],
@@ -142,14 +142,14 @@ export default {
               img: "eth",
             },
             {
-              name: "usd",
+              name: "usdt",
               img: "eth",
             },
           ],
           bottomItems: [
             {
               text: "Pool Deposits",
-              value: "$ 32 400 000",
+              value: "$13,356,742,138",
               color: "blue",
             },
             {
@@ -195,7 +195,7 @@ export default {
           bottomItems: [
             {
               text: "Pool Deposits",
-              value: "$ 28 400 000",
+              value: "$55,222,797,888",
               color: "blue",
             },
             {

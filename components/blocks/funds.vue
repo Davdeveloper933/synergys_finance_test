@@ -1,6 +1,6 @@
 <template>
   <div ref="section" class="section-funds" @scroll="handleScroll">
-    <a href="#home">
+    <a href="#intro-form">
       <ui-button :class="{ fixed: scrolled }" class="section-funds__button">
         Join Whitelist
       </ui-button>
@@ -86,7 +86,7 @@ export default {
   methods: {
     handleScroll() {
       this.sectionOffsetTop = this.$refs.section.offsetTop;
-      console.log(this.sectionOffsetTop, window.scrollY);
+      console.log(Math.floor(window.scrollY),this.sectionOffsetTop)
       if (window.scrollY > this.sectionOffsetTop) {
         this.scrolled = true;
       } else {
@@ -161,10 +161,10 @@ export default {
   }
   &__button {
     padding: 15px 40px;
-    position: sticky;
+    position: absolute;
     z-index: 8888;
-    top: 89%;
     left: 84vw;
+    top: 6%;
     @media screen and (max-width: 1359px) {
       left: 84vw;
     }
@@ -176,6 +176,7 @@ export default {
     }
     &.fixed {
       position: fixed;
+      top: 89%;
     }
   }
   &__steps {

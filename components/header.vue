@@ -22,10 +22,10 @@
         </div>
       </div>
       <div class="site-header__logo site-header__logo-mobile">
-        <a v-if="!mobileMenuIsOpen" href="/">
-          <img src="svg/logo.svg" alt="" />
-        </a>
-        <a v-else href="/">
+<!--        <a v-if="!mobileMenuIsOpen" href="/">-->
+<!--          <img src="svg/logo.svg" alt="" />-->
+<!--        </a>-->
+        <a href="/" class="site-header__logo-mobile__link">
           <img src="svg/logo-text.svg" alt="" />
         </a>
       </div>
@@ -35,29 +35,29 @@
         </a>
       </div>
       <div class="menu-btn-container site-header-item">
-        <div class="desktop-menu-btn">
-          <button
-            v-if="!menuIsOpen"
-            class="menu-btn"
-            @click="menuIsOpen = !menuIsOpen"
-          >
-            <span class="menu-btn__text">Menu</span>
-            <div class="menu-btn__icon_open">
-              <img src="svg/menu-open.svg" alt="" />
-            </div>
-          </button>
-          <button v-else class="menu-btn" @click="menuIsOpen = !menuIsOpen">
-            <span class="menu-btn__text">Close</span>
-            <!--            <div class="menu-btn__icon_close" >-->
-            <img class="menu-btn__icon_close" src="svg/menu-close.svg" alt="" />
-            <!--            </div>-->
-          </button>
+        <div class="site-header-item contact-link-block">
+          <a role="button" href="/" class="contact-link">
+            <span class="contact-link__text">Contact@capella.finance</span>
+          </a>
         </div>
       </div>
-      <div class="site-header-item contact-link-block">
-        <a role="button" href="/" class="contact-link">
-          <span class="contact-link__text">Contact@capella.finance</span>
-        </a>
+      <div class="desktop-menu-btn">
+<!--        <button-->
+<!--          v-if="!menuIsOpen"-->
+<!--          class="menu-btn"-->
+<!--          @click="menuIsOpen = !menuIsOpen"-->
+<!--        >-->
+<!--          <span class="menu-btn__text">Menu</span>-->
+<!--          <div class="menu-btn__icon_open">-->
+<!--            <img src="svg/menu-open.svg" alt="" />-->
+<!--          </div>-->
+<!--        </button>-->
+<!--        <button v-else class="menu-btn" @click="menuIsOpen = !menuIsOpen">-->
+<!--          <span class="menu-btn__text">Close</span>-->
+<!--          &lt;!&ndash;            <div class="menu-btn__icon_close" >&ndash;&gt;-->
+<!--          <img class="menu-btn__icon_close" src="svg/menu-close.svg" alt="" />-->
+<!--          &lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        </button>-->
       </div>
       <div class="tablet-menu-btn">
         <button class="menu-btn rounded" @click="closeDesktopMenu">
@@ -169,7 +169,6 @@ export default {
     },
     handleScroll() {
       this.headerOffsetHeight = this.$refs.header.offsetHeight;
-      console.log(this.headerOffsetHeight, window.scrollY);
       if (window.scrollY > this.headerOffsetHeight) {
         this.scrolled = true;
       } else if (
@@ -220,6 +219,9 @@ export default {
   }
   &-item {
     min-width: 230px;
+    @media screen and (max-width: 1090px) {
+      min-width: 144px;
+    }
     @media screen and (max-width: 767px) {
       min-width: unset;
     }
@@ -253,6 +255,12 @@ export default {
       display: none;
       @media screen and (max-width: 425px) {
         display: inline-block;
+      }
+      &__link {
+        @media screen and (max-width: 375px) {
+          width: 55vw;
+          display: block;
+        }
       }
     }
     &-tablet {
@@ -372,7 +380,7 @@ export default {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
-  padding: 9px 12px;
+  padding: 9px 30px;
   &:not(&-left) {
     @media screen and (max-width: 767px) {
       display: none;
@@ -397,6 +405,9 @@ export default {
   font-weight: 400;
   font-size: 20px;
   margin-bottom: 39px;
+  @media screen and (max-width: 767px) {
+    /*overflow-y: auto;*/
+  }
   &-desktop {
     padding-bottom: 39px;
     @media screen and (max-width: 767px) {
@@ -407,6 +418,9 @@ export default {
     display: none;
     @media screen and (max-width: 767px) {
       display: block;
+    }
+    @media screen and (max-width: 425px) {
+      display: none;
     }
     .ui-button {
       max-width: 245px;
@@ -455,6 +469,16 @@ export default {
       flex-direction: column;
       align-items: center;
       padding: 40px 50px 0 50px;
+      @media screen and (max-width: 400px) {
+        padding: 40px 40px 0 40px;
+      }
+      @media screen and (max-width: 375px) {
+        padding: 40px 30px 0 30px;
+      }
+      a {
+        display: block;
+        width: 100%;
+      }
       .ui-button {
         font-size: 14px;
         padding: 14px 0;
@@ -483,7 +507,7 @@ export default {
 }
 
 .tablet-menu-btn {
-  display: none;
+  /*display: none;*/
   @media screen and (max-width: 767px) {
     display: block;
   }

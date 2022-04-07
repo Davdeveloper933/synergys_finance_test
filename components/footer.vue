@@ -54,26 +54,22 @@ export default {
     return {
       documentation: [
         {
-          text:"Whitepaper",
-          url: "#"
-        },
-        {
           text:"Governance",
           url: "#"
         },
         {
           text:"Privacy Policy",
-          url: "#"
+          url: "https://docs.google.com/document/d/1izpkn5E9vZIJvAt9ijXeujk9wfibpBMLODV9VJe-_0A/edit?usp=sharing"
         },
         {
-          text:"Public offer",
-          url: "#"
+          text:"Terms & Conditions",
+          url: "https://docs.google.com/document/d/1izpkn5E9vZIJvAt9ijXeujk9wfibpBMLODV9VJe-_0A/edit?usp=sharing"
         },
       ],
       social: [
         {
           img: "twitter",
-          url: ""
+          url: "https://twitter.com/capellafinance"
         },
         {
           img: "fb",
@@ -81,23 +77,23 @@ export default {
         },
         {
           img: "discord",
-          url: ""
+          url: "https://discord.gg/QGzjgxgU"
         },
         {
           img: "github",
-          url: ""
+          url: "https://capella-finance-1.gitbook.io/capella.finance/"
         },
         {
           img: "icon1",
           url: ""
         },
         {
-          img: "m",
-          url: ""
+          img: "medium",
+          url: "https://medium.com/@capellafinance"
         },
         {
           img: "telegram",
-          url: ""
+          url: "https://t.me/capellaChannel"
         },
         {
           img: "msg",
