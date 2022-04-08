@@ -21,7 +21,7 @@
                 Our Liquidity Pools
               </h4>
               <p class="section-liquidity__info-item__text">
-                With Capells Finance you can maximize your yield, contribute to
+                With Capella Finance you can maximize your yield, contribute to
                 risk management and create unparalleled opportunities to make
                 the most of DeFi.
               </p>
@@ -31,7 +31,7 @@
                 Get the highest long term yield in DeFi
               </h4>
               <p class="section-liquidity__info-item__text">
-                Capells Finance Liquidity provider protocol passes on all
+                Capella Finance Liquidity provider protocol passes on all
                 surplus generated directly to its users, ensuring their best
                 interest.
               </p>

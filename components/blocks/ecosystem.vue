@@ -1,5 +1,5 @@
 <template>
-  <div class="section-ecosystem section-padding-bottom section-padding-top">
+  <div id="ecosystem" class="section-ecosystem section-padding-bottom section-padding-top">
     <div class="section-ecosystem__absolute-img">
       <img src="img/ecosystem/dark-img.png" alt="">
       <img class="sphere" src="img/ecosystem/ecosystem-sphere.png" alt="">
@@ -78,7 +78,7 @@ export default {
           img: "yearn"
         },
         {
-          title:"Beefe Finance",
+          title:"Beefy Finance",
           text: "The Multichain Yield Optimizer",
           img: "beefe"
         },

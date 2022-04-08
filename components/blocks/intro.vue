@@ -45,20 +45,29 @@
           <div class="section-intro__browser__content">
             <div class="section-intro__browser__content__intro">
 <!--              <img src="svg/globe.svg" alt="" />-->
-              <h3 class="section-intro__browser__content__title">
+              <h3 class="section-intro__browser__content__title" >
                 Capella Finance the easiest-to-use and most transparent products offering high returns for both beginners and experienced investors.              </h3>
             </div>
-            <div class="section-intro__browser__content-img">
+            <div class="section-intro__browser__content-img" id="intro-form">
               <img src="img/laptop.png" alt="">
             </div>
-            <div class="section-intro__browser__content-form">
+            <div class="section-intro__browser__content-form column">
               <h3 class="section-intro__browser__content-form__title">
                 Join Whitelist
               </h3>
               <div class="section-intro__browser__content-form__wrapper">
-                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" />
-                <ui-button>Join Whitelist</ui-button>
+
+                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" v-model="email" :class="{'invalid':isShowError, 'valid':isValid}"/>
+                <ui-button @click="send">Join Whitelist</ui-button>
               </div>
+              <div class="section-intro__browser__content__timer-buttons">
+                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" />
+                <ui-button @click="send">Join Whitelist</ui-button>
+              </div>
+              <span class="tooltip tooltip-err red" v-show="isShowError">
+                                        * fill in the input field
+               </span>
+              <span v-if="isSend"  style='display: inline-block; margin-top: 10px; font-size: 18px; color: green; text-align: center'>Great! Your request has send!</span>
             </div>
 <!--            <div id="intro-form" class="section-intro__browser__content__timer">-->
 <!--              <h3 class="section-intro__browser__content__timer-title">-->
@@ -89,14 +98,6 @@
 <!--                  </div>-->
 <!--                </div>-->
 <!--              </div>-->
-              <div class="section-intro__browser__content__timer-buttons">
-                <input class="ui-input" type="text" placeholder="Your e-mail or telegram" />
-                <ui-button>Join Whitelist</ui-button>
-<!--                <div class="contact-link">-->
-<!--                  <a href="#">contact@capella.finance</a>-->
-<!--                </div>-->
-              </div>
-<!--            </div>-->
           </div>
         </div>
       </div>
@@ -111,12 +112,58 @@ import UiButton from "~/components/ui/ui-button.global";
 export default {
   name: "IntroSection",
   components: {UiButton, UiBtn, SectionTitle },
+  data() {
+    return {
+      email: "",
+      isSend:false,
+      isShowError:false
+    }
+  },
+  methods: {
+    async send(){
+      console.log("click")
+      if(!this.isValid){
+        this.isShowError = true
+        await this.$utils.delay(2000)
+        this.isShowError = false
+      }else{
+        await this.$api.send(this.email)
+        this.isSend = true
+        this.email = ""
+      }
+    }
+  },
+  computed: {
+    isValid() {
+      return this.email.length>0 && this.$utils.validateEmailOrTelegram(this.email);
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .section-intro {
   padding-top: 112px;
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tooltip-err{
+    text-align: center;
+    color:#ff7a82;
+    margin-top: 10px;
+  }
+
+  .valid {
+    border-color: green;
+  }
+
+  .invalid {
+    border-color: #ff7a82;
+  }
+
   &__welcome-wrapper {
     border-bottom: 0.6px solid #FFFFFF;
     /*border-top: 0.6px solid #FFFFFF;*/

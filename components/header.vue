@@ -86,7 +86,7 @@
         >
           {{ item.label }}
         </a>
-        <a href="#home" @click="closeDesktopMenu">
+        <a href="#intro-form" @click="closeDesktopMenu">
           <ui-button>Join Whitelist</ui-button>
         </a>
       </div>
@@ -106,7 +106,7 @@
       </div>
       <img class="menu-opened-mobile-line" src="svg/line.svg" alt="" />
       <div class="menu-opened-mobile__buttons">
-        <a href="#home" @click="closeMobileMenu">
+        <a href="#intro-form" @click="closeMobileMenu">
           <ui-button>Join Whitelist</ui-button>
         </a>
         <ui-button class="menu-opened-mobile__buttons-contact"
@@ -125,7 +125,7 @@
         >
           {{ item.label }}
         </a>
-        <a href="#home" @click="closeDesktopMenu">
+        <a href="#intro-form" @click="closeDesktopMenu">
           <ui-button>Join Whitelist</ui-button>
         </a>
         <ui-button class="menu-opened-mobile__buttons-contact"
@@ -303,7 +303,7 @@ export default {
     width: 100%;
     top: 0;
     z-index: 9999;
-    overflow: auto;
+    overflow-y: auto;
     .site-header__wrapper {
       align-items: center;
       @media screen and (max-width: 767px) {
@@ -330,7 +330,7 @@ export default {
       width: 100%;
       top: 0;
       z-index: 9999;
-      overflow: auto;
+      overflow-y: auto;
       @media screen and (max-width: 425px) {
         .site-header__wrapper {
           align-items: center;
@@ -405,17 +405,17 @@ export default {
 .menu-opened {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /*overflow-x: hidden;*/
   transition: 0.5s;
   padding-top: 62px;
   font-weight: 400;
   font-size: 20px;
-  margin-bottom: 39px;
+  /*margin-bottom: 39px;*/
   @media screen and (max-width: 767px) {
     /*overflow-y: auto;*/
   }
   &-desktop {
-    padding-bottom: 39px;
+    /*padding-bottom: 39px;*/
     @media screen and (max-width: 767px) {
       display: none;
     }
@@ -443,6 +443,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
   }
   &__link {
     margin-bottom: 36px;
@@ -454,7 +455,7 @@ export default {
     display: none;
     justify-content: center;
     flex-direction: column;
-    padding: 0 16px;
+    padding: 0 16px 40px 16px;
     @media screen and (max-width: 425px) {
       display: flex;
     }

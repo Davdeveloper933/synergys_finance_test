@@ -56,6 +56,16 @@ export default {
     SiteHeader,
   },
   layout: "DefaultLayout",
+  head() {
+    return {
+      title: "Capella Finance",
+      meta: [
+        {hid: "og:title", property: "og:title", content: "Capella Finance"},
+        {hid: "og:url", property: "og:url", content: "https://capella.finance"},
+        {hid: "og:image", property: "og:image", content: "https://capella.finance/img/CapellaFinance.jpg"},
+      ]
+    }
+  },
 };
 </script>
 

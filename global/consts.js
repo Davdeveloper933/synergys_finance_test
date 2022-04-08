@@ -8,6 +8,10 @@ export const menuItems = [
     url: "#funds",
   },
   {
+    label: "Best Invest Strategy",
+    url: "#invest",
+  },
+  {
     label: "Choose market",
     url: "#market",
   },
@@ -15,10 +19,10 @@ export const menuItems = [
     label: "Best Yields",
     url: "#holders",
   },
-  {
-    label: "How it works",
-    url: "#how-it-works",
-  },
+// {
+  //   label: "How it works",
+  //   url: "#how-it-works",
+  // },
   {
     label: "Liquidity",
     url: "#liquidity",
@@ -26,6 +30,14 @@ export const menuItems = [
   {
     label: "Top blockchains",
     url: "#top-blockchains",
+  },
+  {
+    label: "RoadMap",
+    url: "#roadmap",
+  },
+  {
+    label: "Ecosystem",
+    url: "#ecosystem",
   },
   {
     label: "Contact",

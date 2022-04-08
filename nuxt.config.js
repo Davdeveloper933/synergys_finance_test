@@ -1,9 +1,9 @@
+const debug = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
-  router: {
-    base: "/synergys_finance_test/"
-  },
   styleResources: {
     scss: [
       "@/assets/scss/index.scss",
@@ -11,17 +11,18 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "synergys_finance_test",
+    title: 'Capella Finance',
     htmlAttrs: {
-      lang: "en",
+      lang: 'en'
     },
     meta: [
-      {charset: "utf-8"},
-      {name: "viewport", content: "width=device-width, initial-scale=1"},
-      {hid: "description", name: "description", content: ""},
-      {name: "format-detection", content: "telephone=no"},
+      {charset: 'utf-8'},
+      {property: 'og:type', content: 'website'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'},
     ],
-    link: [{rel: "icon", type: "image/x-icon", href: "/favicon.png"}],
+    link: [
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -33,7 +34,12 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {mode: 'all', src: '~/plugins/api-plugin'},
+    {mode: 'all', src: '~/plugins/utils-plugin'},
+    {mode: 'client', src: '~/plugins/vue-youtube'},
+    {mode: 'client', src: '~plugins/vue-js-modal.js'}
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -52,9 +58,11 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    // baseURL: "/",
-  },
+    baseURL: debug ? "http://localhost:1337" : 'https://capella.finance',
+    //baseURL: 'https://capella.finance',
+    // baseURL: 'http://localhost:1337',
+    withCredentials: !debug,
+    debug,},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

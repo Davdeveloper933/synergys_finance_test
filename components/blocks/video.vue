@@ -1,5 +1,5 @@
 <template>
-  <div class="section-video">
+  <div class="section-video" id="invest">
     <div class="container">
       <div class="section-video__wrapper">
         <div class="section-video__title">
@@ -35,7 +35,9 @@
 <!--              allowfullscreen-->
 <!--            >-->
 <!--            </iframe>-->
-            <youtube :width="'100%'" :height="'100%'" :video-id="videoId" ref="youtube"></youtube>
+            <div class="iframe-wrapper">
+              <youtube :width="'100%'" :height="'100%'" class="youtube" :video-id="videoId" ref="youtube"></youtube>
+            </div>
           </div>
           <div class="section-video__video-block__dark-img">
             <img src="img/dark.png" alt="" />
@@ -124,13 +126,17 @@ export default {
       cursor: pointer;
       transition: opacity .3s;
       opacity: 1;
+      .iframe-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
       &::v-deep {
         iframe {
           border-radius: 16px;
+          width: 100%;
+          height: 100%;
         }
-      }
-      &.hidden {
-        opacity: 0;
       }
       @media screen and (max-width: 1092px) {
         width: 100%;
@@ -148,6 +154,7 @@ export default {
         height: 100%;
         top: 0;
         left: 0;
+        z-index: 2;
         background-image: url("assets/banner.jpg");
         background-size: cover;
         border-radius: 16px;

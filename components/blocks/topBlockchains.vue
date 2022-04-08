@@ -85,7 +85,7 @@ export default {
           tokens: [
             {
               name: "usdt",
-              img: "usdt-blue.png",
+              img: "tether.svg",
             },
             {
               name: "usdc",
@@ -93,7 +93,7 @@ export default {
             },
             {
               name: "dei",
-              img: "usdt-dark.png",
+              img: "dei.png",
             },
             {
               name: "busb",

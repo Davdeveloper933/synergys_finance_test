@@ -1,5 +1,5 @@
 <template>
-  <div class="section-roadmap section-padding-bottom section-padding-top">
+  <div id="roadmap" class="section-roadmap section-padding-bottom section-padding-top">
     <div class="container">
       <div class="section-roadmap__top-block">
         <div class="section-roadmap__top-block__title">
@@ -129,7 +129,7 @@ export default {
         {
           q: "q",
           numb: "3",
-          title: "3nd quarter 2022",
+          title: "3rd quarter 2022",
           button: "future",
           points: [
             "Transition product into a truly DEFI platform with $CAPE as Governance token",
@@ -142,7 +142,7 @@ export default {
         {
           q: "q",
           numb: "4",
-          title: "2nd quarter 2021",
+          title: "2th quarter 2022",
           button: "future",
           points: [
             "Build an on-chain perpetual futures DEX with deep liquidity and builder-ready composability",

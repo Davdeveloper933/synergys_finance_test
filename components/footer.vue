@@ -11,12 +11,25 @@
               <h3 class="site-footer__wrapper-contact__subtitle">
                 Documentation
               </h3>
-              <a :href="item.url" v-for="(item,indx) in documentation"
-                 :key="indx"
+              <a href="#"
                  class="site-footer__wrapper-contact__documentation-item"
               >
-                {{ item.text }}
+                Governance
               </a>
+              <span
+                 @click="showPrivacyModal"
+                 role="button"
+                 class="site-footer__wrapper-contact__documentation-item"
+              >
+                Privacy Policy
+              </span>
+              <span
+                 @click="showTermsModal"
+                 role="button"
+                 class="site-footer__wrapper-contact__documentation-item"
+              >
+                Terms & Conditions
+              </span>
             </div>
             <div class="site-footer__wrapper-contact__social">
               <h3 class="site-footer__wrapper-contact__subtitle">
@@ -44,12 +57,21 @@
         </div>
       </div>
     </div>
+    <modal name="privacy-modal">
+      <PrivacyModal />
+    </modal>
+    <modal name="terms-modal">
+      <TermsModal />
+    </modal>
   </div>
 </template>
 
 <script>
+import PrivacyModal from "~/components/modals/PrivacyModal";
+import TermsModal from "~/components/modals/TermsModal";
 export default {
   name: "SiteFooter",
+  components: { TermsModal, PrivacyModal },
   data () {
     return {
       documentation: [
@@ -87,10 +109,7 @@ export default {
         //   img: "icon1",
         //   url: ""
         // },
-        {
-          img: "medium",
-          url: "https://medium.com/@capellafinance"
-        },
+
         {
           img: "telegram",
           url: "https://t.me/capellaChannel"
@@ -100,6 +119,20 @@ export default {
         //   url: ""
         // },
       ]
+    }
+  },
+  methods: {
+    showPrivacyModal () {
+      this.$modal.show("privacy-modal");
+    },
+    hidePrivacyModal () {
+      this.$modal.hide("privacy-modal");
+    },
+    showTermsModal () {
+      this.$modal.show("terms-modal");
+    },
+    hideTermsModal () {
+      this.$modal.hide("terms-modal");
     }
   }
 };
@@ -286,6 +319,12 @@ export default {
       @media screen and (max-width: 1359px) {
         font-size: 14px;
       }
+    }
+  }
+
+  vm--modal {
+    &::v-deep {
+      overflow-y: auto;
     }
   }
 </style>
