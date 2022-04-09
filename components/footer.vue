@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <modal name="privacy-modal">
+    <modal style="height: 100%;" name="privacy-modal">
       <PrivacyModal />
     </modal>
     <modal name="terms-modal">
@@ -322,9 +322,18 @@ export default {
     }
   }
 
-  vm--modal {
+  .vm--container {
     &::v-deep {
-      overflow-y: auto;
+      .vm--modal {
+        overflow: auto;
+        height: 80% !important;
+        width: 85% !important;
+        top: 85px !important;
+        left: 0 !important;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
     }
   }
 </style>

@@ -19,7 +19,7 @@
         </picture>
         <img class="spline-left" src="img/spline_left.png" alt="" />
         <img class="spline-right" src="img/spline_right.png" alt="" />
-        <div class="section-intro__browser__inner">
+        <div class="section-intro__browser__inner" id="intro-form">
           <div class="section-intro__browser-header">
             <div class="section-intro__browser-header-wrapper">
               <div>
@@ -43,12 +43,12 @@
           </ui-btn>
           <!--          </div>-->
           <div class="section-intro__browser__content">
-            <div class="section-intro__browser__content__intro">
+            <div class="section-intro__browser__content__intro" >
 <!--              <img src="svg/globe.svg" alt="" />-->
               <h3 class="section-intro__browser__content__title" >
                 Capella Finance the easiest-to-use and most transparent products offering high returns for both beginners and experienced investors.              </h3>
             </div>
-            <div class="section-intro__browser__content-img" id="intro-form">
+            <div class="section-intro__browser__content-img">
               <img src="img/laptop.png" alt="">
             </div>
             <div class="section-intro__browser__content-form column">
@@ -69,35 +69,6 @@
                </span>
               <span v-if="isSend"  style='display: inline-block; margin-top: 10px; font-size: 18px; color: green; text-align: center'>Great! Your request has send!</span>
             </div>
-<!--            <div id="intro-form" class="section-intro__browser__content__timer">-->
-<!--              <h3 class="section-intro__browser__content__timer-title">-->
-<!--                Turn on our auto-pilot, relax, and prepare for the Private-->
-<!--                round!-->
-<!--              </h3>-->
-<!--              <h3 class="timer-starts-in">Starts in</h3>-->
-<!--              <div class="timer-block">-->
-<!--                <div class="timer-block__wrapper">-->
-<!--                  <div class="timer-block-item">-->
-<!--                    <p class="timer-block-item__value">12</p>-->
-<!--                    <p class="timer-block-item__time">day</p>-->
-<!--                  </div>-->
-<!--                  <img class="timer-dot" src="img/dot-white.png" alt="" />-->
-<!--                  <div class="timer-block-item">-->
-<!--                    <p class="timer-block-item__value">8</p>-->
-<!--                    <p class="timer-block-item__time">hour</p>-->
-<!--                  </div>-->
-<!--                  <img class="timer-dot" src="img/dot-white.png" alt="" />-->
-<!--                  <div class="timer-block-item">-->
-<!--                    <p class="timer-block-item__value">24</p>-->
-<!--                    <p class="timer-block-item__time">min</p>-->
-<!--                  </div>-->
-<!--                  <img class="timer-dot" src="img/dot-pink.png" alt="" />-->
-<!--                  <div class="timer-block-item">-->
-<!--                    <p class="timer-block-item__value">37</p>-->
-<!--                    <p class="timer-block-item__time">sec</p>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
           </div>
         </div>
       </div>

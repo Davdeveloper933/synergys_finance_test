@@ -42,7 +42,7 @@
               </div>
               <p class="section-holders__info-item__text">
                 To start receiving passive income from your crypto assets,
-                simply buy SYN and stake it on our platform
+                simply buy CAPE and stake it on our platform
               </p>
             </div>
           </div>
